@@ -23,8 +23,9 @@ logs
 .env.*
 !.env.example
 
-# Package managers
+# Package managers (pnpm - project uses npm)
 pnpm-lock.yaml
+pnpm-workspace.yaml
 
 # Screenshots and artifacts
 *.png
