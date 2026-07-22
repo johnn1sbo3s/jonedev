@@ -13,26 +13,24 @@
 			through front-end development and design, blending code and data to improve lives.
 		</div>
 
-		<div class="flex w-full gap-3 mt-5 max-w-[400px]">
-			<a
-				class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-2 py-1 px-4 rounded-2xl transition-all"
-				href="https://www.linkedin.com/in/joaopaulo-castro/"
-				target="_blank"
-				rel="noopener noreferrer"
+		<div class="flex gap-3 mt-5 max-w-[400px]">
+			<SimpleButton
+				link="https://www.linkedin.com/in/joaopaulo-castro/"
+				title="LinkedIn"
 			>
-				<img src="/img/linkedin.svg" alt="LinkedIn">
-				<span class="color-neutral-dark">LinkedIn</span>
-			</a>
+				<template #icon>
+					<img src="/img/linkedin.svg" alt="LinkedIn">
+				</template>
+			</SimpleButton>
 
-			<a
-				class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl transition-all"
-				href="https://github.com/johnn1sbo3s/"
-				target="_blank"
-				rel="noopener noreferrer"
+			<SimpleButton
+				link="https://github.com/johnn1sbo3s/"
+				title="GitHub"
 			>
-				<img src="/img/github.svg" alt="GitHub">
-				<span class="color-neutral-dark">GitHub</span>
-			</a>
+				<template #icon>
+					<img src="/img/github.svg" alt="GitHub">
+				</template>
+			</SimpleButton>
 		</div>
 	</div>
 </template>
