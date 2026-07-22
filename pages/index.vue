@@ -1,17 +1,15 @@
 <template>
 	<div>
 		<!-- Desktop -->
-		<div class="hidden lg:flex w-full min-h-screen flex-col relative overflow-hidden bg-[#edf0f1]">
+		<div class="hidden lg:flex w-full min-h-screen flex-col">
 			<div class="w-full flex justify-center pt-6">
-				<div class="w-full max-w-[1440px] px-10">
+				<div class="w-full max-w-[1440px]">
 					<NavigationMenu active-nav-item='home' />
 				</div>
 			</div>
 
-			<div class="background-lightning" />
-			<div class="background-circle" />
 
-			<div class="flex items-center justify-center max-w-[1440px] mx-auto w-full gap-10 px-10 pt-16">
+			<div class="flex items-center justify-center max-w-[1440px] mx-auto w-full gap-10 pt-16">
 				<HeroLeftContent />
 
 				<HeroIllustration class="shrink-0" />
@@ -19,7 +17,7 @@
 		</div>
 
 		<!-- Mobile -->
-		<div class="flex lg:hidden w-full min-h-screen flex-col px-6 py-8">
+		<div class="flex lg:hidden w-full min-h-screen flex-col">
 			<div class="flex justify-center mb-6">
 				<NavigationMenu active-nav-item='home' />
 			</div>
@@ -72,31 +70,3 @@
 	</div>
 </template>
 
-<style lang="css" scoped>
-
-.background-lightning {
-	position: absolute;
-	background: #8B5CF6;
-	height: 90px;
-	width: 1200px;
-	border-radius: 50%;
-	bottom: 180px;
-	left: -220px;
-	rotate: -7deg;
-	filter: blur(80px);
-	opacity: 0.20;
-}
-
-.background-circle {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 50%;
-	width: 40%;
-	border-radius: 100%;
-	background: #21ADFE;
-	filter: blur(100px);
-	opacity: 0.06;
-}
-
-</style>
