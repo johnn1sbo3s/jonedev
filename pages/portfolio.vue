@@ -1,25 +1,25 @@
 <template>
 	<div class="h-full flex flex-col items-center">
 		<!-- Nav -->
-		<div class="w-full flex justify-center">
+		<div class="w-full flex justify-center" data-animate="delay-1">
 			<div class="w-full max-w-[1150px]">
 				<NavigationMenu active-nav-item="portfolio" />
 			</div>
 		</div>
 
 		<!-- Title -->
-		<div class="w-full mt-8 lg:mt-24 flex justify-center text-4xl lg:text-6xl font-black">
+		<div class="w-full mt-8 lg:mt-24 flex justify-center text-4xl lg:text-6xl font-black" data-animate="delay-2">
 			<div class="color-primary">My</div>
 			<div class="color-neutral">Portfolio</div>
 			<div class="color-primary">.</div>
 		</div>
 
-		<div class="text-lg lg:text-xl text-gray-400 font-light mt-1">
+		<div class="text-lg lg:text-xl text-gray-400 font-light mt-1" data-animate="delay-3">
 			A collection of my work
 		</div>
 
 		<!-- Projects -->
-		<div class="flex flex-col justify-center w-full max-w-[1150px] gap-10 lg:gap-16 mt-4 mb-10 lg:mt-8 lg:mb-20 px-4 lg:px-0">
+		<div class="flex flex-col justify-center w-full max-w-[1150px] gap-10 lg:gap-12 mt-4 mb-10 lg:mt-8 lg:mb-20 px-4 lg:px-0">
 			<ProjectCard
 				v-for="project in projects"
 				:key="project.name"
@@ -29,6 +29,7 @@
 				:text-color="project.textColor"
 				:gradient-color="project.gradient"
 				:logo-src="project.logoSrc"
+				data-animate
 			>
 				<template #title>
 					<!-- Desktop title -->
@@ -66,6 +67,8 @@
 </template>
 
 <script setup>
+
+useScrollAnimation();
 
 const projects = [
 	{
@@ -123,7 +126,7 @@ const projects = [
 	},
 	{
 		name: 'Minha Vez',
-		text: `Minha Vez is an innovative dashboard that optimises the management of service queues,
+		text: `Minha Vez is an innovative dashboard that optimizes the management of service queues,
 			organizing daily calls based on priorities defined by the reception desk. I actively participated
 			in the initial conception of the project, creating flows and interactions that ensure an efficient
 			and intuitive user experience. In addition, I managed the development team as Scrum Master, ensuring
