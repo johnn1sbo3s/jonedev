@@ -1,30 +1,18 @@
 <template>
 	<div class="w-full min-h-screen flex flex-col">
-		<!-- Nav: centered on mobile, full width max-w on desktop -->
-		<div class="w-full flex justify-center lg:pt-6">
+		<!-- Nav -->
+		<div class="w-full flex justify-center">
 			<div class="w-full max-w-[1150px]">
-				<!-- Logo: only on mobile -->
-				<div class="flex justify-center mb-6 lg:hidden">
-					<img
-						src="/img/logo.svg"
-						alt="logo"
-						width="80px"
-						class="cursor-pointer"
-					>
-				</div>
-
 				<NavigationMenu active-nav-item='home' />
 			</div>
 		</div>
 
 		<!-- Hero -->
-		<div
-			class="flex flex-col lg:flex-row items-center max-w-[1150px] mx-auto w-full gap-6 lg:gap-10 lg:pt-16"
-		>
+		<div class="flex flex-col lg:flex-row items-center max-w-[1150px] mx-auto w-full gap-6 lg:gap-10 pt-12 lg:pt-16">
 			<!-- Left content -->
-			<div class="flex flex-col gap-3 min-w-0 shrink">
+			<div class="flex flex-col gap-3 min-w-0 shrink items-center lg:items-start">
 				<!-- Name + subtitle -->
-				<div class="text-5xl lg:text-6xl font-black flex flex-col items-start relative">
+				<div class="text-5xl lg:text-6xl font-black flex flex-col items-center lg:items-start relative">
 					<div class="absolute -left-4 -top-2 h-28 w-28 lg:-left-6 lg:-top-3 lg:h-36 lg:w-36 rounded-full bg-white/40 border-l-2 border-violet-200/80" />
 
 					<div class="color-neutral z-10">João Paulo</div>
@@ -35,13 +23,13 @@
 				</div>
 
 				<!-- Description -->
-				<div class="text-base lg:text-xl mt-2 lg:mt-8 font-light color-neutral w-full">
+				<div class="text-base lg:text-xl mt-2 lg:mt-8 font-light color-neutral w-full text-center lg:text-left">
 					Crafting impactful digital solutions for over 6 years. I build intuitive products
 					through front-end development and design, blending code and data to improve lives.
 				</div>
 
 				<!-- Buttons -->
-				<div class="flex flex-col lg:flex-row w-full gap-3 lg:gap-5 mt-4 lg:mt-10 max-w-[400px]">
+				<div class="flex flex-col lg:flex-row w-full gap-3 lg:gap-5 mt-4 lg:mt-10 max-w-[400px] z-50">
 					<SimpleButton
 						link="https://www.linkedin.com/in/joaopaulo-castro/"
 						title="LinkedIn"
