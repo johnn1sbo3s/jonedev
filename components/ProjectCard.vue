@@ -14,7 +14,7 @@
 			<div
 				class="relative overflow-hidden w-full flex flex-col gap-4 justify-center rounded-2xl card-content
 					py-6 px-6
-					xl:py-8 xl:px-12"
+					xl:py-6 xl:px-8 xl:min-h-[265px]"
 				:style="{ background: gradientColor }"
 			>
 				<img
@@ -25,7 +25,7 @@
 				>
 
 				<div
-					class="w-full xl:w-[55%] text-sm z-10"
+					class="w-full xl:w-[55%] text-sm font-normal z-10"
 				>
 					{{ text }}
 				</div>
