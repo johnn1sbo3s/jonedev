@@ -1,86 +1,43 @@
 <template>
-	<div v-if="$device.isDesktop" class="flex justify-between justify-self-center max-w-[1920px] items-center w-full z-10">
+	<div class="flex justify-between items-center w-full z-10">
 		<img
-			class="cursor-pointer"
+			class="cursor-pointer hidden lg:block"
 			src="/img/logo.svg"
 			alt="logo"
 			width="75px"
 			@click="redirectToHome"
 		>
 
-		<div class="flex items-center gap-8 color-neutral">
+		<div
+			class="flex items-center gap-4 lg:gap-8 color-neutral mx-auto lg:mx-0"
+		>
 			<NuxtLink
-				to="/"
+				v-for="item in navItems"
+				:key="item.name"
+				:to="item.path"
 				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
-				:class="activeNavItem === 'home' ? 'active-nav-item' : ''"
+				:class="activeNavItem === item.name ? 'active-nav-item' : ''"
 			>
-				<span>Home</span>
+				<span>{{ item.label }}</span>
 
 				<div
-					v-if="activeNavItem === 'home'"
-					class="w-1/3 h-[3px] bg-violet-500 border-radius-full"
-				/>
-			</NuxtLink>
-
-			<NuxtLink
-				to="/portfolio"
-				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
-				:class="activeNavItem === 'portfolio' ? 'active-nav-item' : ''"
-			>
-				<span>Portfolio</span>
-
-				<div
-					v-if="activeNavItem === 'portfolio'"
-					class="w-1/3 h-[3px] bg-violet-500"
+					v-if="activeNavItem === item.name"
+					class="w-1/3 h-[3px] bg-violet-500 rounded-full"
 				/>
 			</NuxtLink>
 		</div>
 
 		<button
-			class="button-primary hover:shadow-lg hover:shadow-violet-200"
+			class="button-primary hover:shadow-lg hover:shadow-violet-200 hidden lg:block"
 			@click="openEmail"
 		>
 			Contact me
 		</button>
 	</div>
-
-	<div
-		v-else
-		class="w-full flex items-center justify-center"
-	>
-		<div class="flex items-center gap-4 color-neutral">
-			<NuxtLink
-				to="/"
-				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
-				:class="activeNavItem === 'home' ? 'active-nav-item' : ''"
-			>
-				<span>Home</span>
-
-				<div
-					v-if="activeNavItem === 'home'"
-					class="w-1/3 h-[3px] bg-violet-500 border-radius-full"
-				/>
-			</NuxtLink>
-
-			<NuxtLink
-				to="/portfolio"
-				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
-				:class="activeNavItem === 'portfolio' ? 'active-nav-item' : ''"
-			>
-				<span>Portfolio</span>
-
-				<div
-					v-if="activeNavItem === 'portfolio'"
-					class="w-1/3 h-[3px] bg-violet-500"
-				/>
-			</NuxtLink>
-		</div>
-	</div>
 </template>
 
 <script setup>
-
-defineProps({
+const props = defineProps({
 	activeNavItem: {
 		type: String,
 		default: 'home'
@@ -89,6 +46,11 @@ defineProps({
 
 const router = useRouter();
 
+const navItems = [
+	{ name: 'home', label: 'Home', path: '/' },
+	{ name: 'portfolio', label: 'Portfolio', path: '/portfolio' }
+];
+
 function redirectToHome() {
 	router.push('/');
 }
@@ -96,11 +58,9 @@ function redirectToHome() {
 function openEmail() {
 	window.location.href = 'mailto:joaopaulocastro@gmail.com';
 }
-
 </script>
 
 <style lang="css" scoped>
-
 .active-nav-item {
 	color: #8B5CF6;
 }
@@ -119,5 +79,4 @@ function openEmail() {
 .button-primary:hover {
 	background-color: #733BF3;
 }
-
 </style>
