@@ -17,3 +17,260 @@ div {
 .color-neutral-light {
   color: #65626A;
 }
+
+/* =========================================================
+   Animation Keyframes
+   ========================================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
+  }
+}
+
+/* =========================================================
+   Hero Animation Classes (Page Load)
+   ========================================================= */
+
+.anim-nav {
+  animation: fadeInDown 400ms ease-out both;
+}
+
+.anim-hero-name {
+  animation: fadeInUp 600ms ease-out 200ms both;
+}
+
+.anim-hero-title {
+  animation: fadeInUp 600ms ease-out 350ms both;
+}
+
+.anim-hero-description {
+  animation: fadeInUp 500ms ease-out 600ms both;
+}
+
+.anim-hero-buttons {
+  animation: fadeInUp 400ms ease-out 800ms both;
+}
+
+.anim-illustration {
+  animation: slideInRight 800ms ease-out 400ms both;
+}
+
+/* =========================================================
+   Scroll Reveal Classes
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-stagger.in-view > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger.in-view > *:nth-child(2) { transition-delay: 100ms; }
+.reveal-stagger.in-view > *:nth-child(3) { transition-delay: 200ms; }
+.reveal-stagger.in-view > *:nth-child(4) { transition-delay: 300ms; }
+.reveal-stagger.in-view > *:nth-child(5) { transition-delay: 400ms; }
+
+/* =========================================================
+   Skill Card Animations
+   ========================================================= */
+
+.skill-card {
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0s; }
+.skill-card:nth-child(2) { animation-delay: 1s; }
+.skill-card:nth-child(3) { animation-delay: 2s; }
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+}
+
+.skill-card .skill-glow {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   Project Card Animations
+   ========================================================= */
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .light-effect {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   Button & Link Transitions
+   ========================================================= */
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #8B5CF6;
+}
+
+.btn-primary {
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   Page Transitions
+   ========================================================= */
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .skill-card,
+  .project-card .light-effect {
+    animation: none !important;
+  }
+}

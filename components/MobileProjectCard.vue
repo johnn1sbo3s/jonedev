@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full flex flex-col gap-2 z-10">
+	<div class="w-full flex flex-col gap-2 z-10 mobile-card-wrapper">
 		<slot name="title"/>
 
 		<div class="w-full">
@@ -60,21 +60,19 @@ const computedTextColor = computed(() => props.textColor);
 
 <style lang="css" scoped>
 
-.project-card {
-	width: 100%;
+.mobile-card-wrapper {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-card-wrapper:active {
+	transform: scale(0.98);
 }
 
 .card-content {
 	font-weight: 300;
 	border: 1.7px solid v-bind(computedLightEffectColor);
 	color: v-bind(computedTextColor);
-}
-
-.image-container {
-	position: absolute;
-	top: -4%;
-	right: 0;
-	z-index: 10;
+	transition: border-color 0.3s ease;
 }
 
 .light-effect {
@@ -87,6 +85,12 @@ const computedTextColor = computed(() => props.textColor);
 	border-radius: 50%;
 	filter: blur(60px);
 	opacity: 0.12;
+	animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0%, 100% { opacity: 0.12; }
+	50% { opacity: 0.2; }
 }
 
 </style>

@@ -16,25 +16,25 @@
 				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10 left-information">
 					<div class="text-6xl font-black flex flex-col items-start relative">
 						<img
-							class="elipse-detail"
+							class="elipse-detail anim-hero-name"
 							src="/img/elipse-detail.png"
 						>
 
-						<div class="color-neutral z-10">João Paulo</div>
+						<div class="color-neutral z-10 anim-hero-name">João Paulo</div>
 
-						<div class="color-primary z-10">Castro</div>
+						<div class="color-primary z-10 anim-hero-title">Castro</div>
 
-						<span class="color-neutral-light z-10 mt-2 text-xl font-light">UX Designer | Frontend Developer</span>
+						<span class="color-neutral-light z-10 mt-2 text-xl font-light anim-hero-title">UX Designer | Frontend Developer</span>
 					</div>
 
-					<div class="text-xl mt-8 font-light color-neutral w-full">
+					<div class="text-xl mt-8 font-light color-neutral w-full anim-hero-description">
 						Crafting impactful digital solutions for over 6 years. I build intuitive products
 						through front-end development and design, blending code and data to improve lives.
 					</div>
 
-					<div class="flex w-full gap-5 mt-10">
+					<div class="flex w-full gap-5 mt-10 anim-hero-buttons">
 						<div
-							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
+							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl btn-primary"
 							@click="openLinkedin"
 						>
 							<img
@@ -46,7 +46,7 @@
 						</div>
 
 						<div
-							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
+							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl btn-primary"
 							@click="openGithub"
 						>
 							<img
@@ -59,30 +59,38 @@
 					</div>
 				</div>
 
-				<div class="relative justify-center illustration-container">
-					<img
-						class="ux-card"
-						src="/img/ux-card.svg"
-						alt="UX Card"
-					>
+				<div class="relative justify-center illustration-container anim-illustration">
+					<div class="skill-cards-grid">
+						<SkillCard
+							icon="🎨"
+							title="UX Design"
+							description="User research, wireframing, prototyping, and usability testing"
+							class-name="skill-card"
+							:bg-color="'rgba(139, 92, 246, 0.08)'"
+							:icon-bg="'rgba(139, 92, 246, 0.15)'"
+							:glow-color="'#8B5CF6'"
+						/>
 
-					<img
-						class="frontend-card"
-						src="/img/frontend-card.svg"
-						alt="Frontend Card"
-					>
+						<SkillCard
+							icon="💻"
+							title="Frontend"
+							description="Vue, React, TypeScript, Tailwind CSS, and modern frameworks"
+							class-name="skill-card"
+							:bg-color="'rgba(33, 173, 254, 0.08)'"
+							:icon-bg="'rgba(33, 173, 254, 0.15)'"
+							:glow-color="'#21ADFE'"
+						/>
 
-					<img
-						class="data-science-card"
-						src="/img/data-science-card.svg"
-						alt="Data Science Card"
-					>
-
-					<img
-						src="/img/picture.svg"
-						alt="Picture"
-						width="400%"
-					>
+						<SkillCard
+							icon="📊"
+							title="Data Science"
+							description="Python, SQL, machine learning, and data visualization"
+							class-name="skill-card"
+							:bg-color="'rgba(16, 185, 129, 0.08)'"
+							:icon-bg="'rgba(16, 185, 129, 0.15)'"
+							:glow-color="'#10B981'"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -124,7 +132,7 @@
 
 				<div class="flex flex-col w-full gap-4 mt-8">
 					<div
-						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
+						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl btn-primary"
 						@click="openLinkedin"
 					>
 						<img
@@ -137,12 +145,12 @@
 					</div>
 
 					<div
-						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
+						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl btn-primary"
 						@click="openGithub"
 					>
 						<img
 							src="/img/github.svg"
-							alt="LinkedIn"
+							alt="GitHub"
 							width="28"
 							@click="openGithub"
 						>
@@ -151,7 +159,7 @@
 					</div>
 
 					<div
-						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
+						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl btn-primary"
 						@click="openEmail"
 					>
 						<Icon
@@ -229,22 +237,11 @@ function openEmail() {
 	left: -10%;
 }
 
-.ux-card {
-	position: absolute;
-	top: 6%;
-	left: -45%;
-}
-
-.frontend-card {
-	position: absolute;
-	top: -3%;
-	right: -30%;
-}
-
-.data-science-card {
-	position: absolute;
-	bottom: -12%;
-	right: 30%;
+.skill-cards-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 320px;
 }
 
 @media (max-width: 1500px) {

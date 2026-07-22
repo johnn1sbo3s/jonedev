@@ -10,7 +10,7 @@
             <div class="background-circle" />
 
             <div class="flex flex-col items-center justify-center gap-3">
-                <div class="w-full mt-24 flex justify-center text-6xl font-black">
+                <div class="w-full mt-24 flex justify-center text-6xl font-black reveal">
                     <div class="color-primary">My</div>
 
                     <div class="color-neutral">Portfolio</div>
@@ -18,9 +18,9 @@
                     <div class="color-primary">.</div>
                 </div>
 
-                <div class="text-xl text-gray-400 font-light">A collection of my work</div>
+                <div class="text-xl text-gray-400 font-light reveal">A collection of my work</div>
 
-                <div class="flex flex-col justify-center w-4/5 gap-16 my-20">
+                <div class="flex flex-col justify-center w-4/5 gap-16 my-20 reveal-stagger">
                     <ProjectCard
                         v-for="project in projects"
                         :key="project.name"
