@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full min-h-screen background-design px-26 py-8 relative">
+	<div class="w-full min-h-screen background-design px-16 py-8 relative">
 		<div class="background-lightning" />
 		<div class="background-circle" />
 		<NuxtPage />
