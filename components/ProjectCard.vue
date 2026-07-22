@@ -1,9 +1,10 @@
 <template>
 	<div class="w-full flex flex-col gap-3 z-10">
-		<slot name="title"/>
+		<slot name="title" />
 
-		<div class="w-full h-[260px] relative">
-			<div class="image-container">
+		<div class="w-full relative">
+			<!-- Image: only on desktop (lg+) -->
+			<div class="hidden lg:block absolute -top-[4%] right-0 z-10">
 				<img
 					:src="imageSrc"
 					alt="Project image"
@@ -11,7 +12,9 @@
 			</div>
 
 			<div
-				class="relative overflow-hidden w-full h-[260px] flex flex-col gap-4 justify-center py-4 px-12 rounded-2xl card-content"
+				class="relative overflow-hidden w-full flex flex-col gap-4 justify-center rounded-2xl card-content
+					py-5 px-5
+					lg:h-[260px] lg:py-4 lg:px-12"
 				:style="{ background: gradientColor }"
 			>
 				<img
@@ -21,10 +24,13 @@
 					width="150px"
 				>
 
-				<div class="lg:w-[55%] text-sm z-10 text-container">
+				<div
+					class="w-full lg:w-[55%] text-sm z-10"
+				>
 					{{ text }}
 				</div>
 
+				<!-- Light effect: different positions for mobile/desktop -->
 				<div class="light-effect" />
 			</div>
 		</div>
@@ -67,42 +73,31 @@ const computedTextColor = computed(() => props.textColor);
 
 <style lang="css" scoped>
 
-.project-card {
-	width: 100%;
-}
-
 .card-content {
 	font-weight: 300;
 	border: 1.7px solid v-bind(computedLightEffectColor);
 	color: v-bind(computedTextColor);
 }
 
-.image-container {
-	position: absolute;
-	top: -4%;
-	right: 0;
-	z-index: 10;
-}
-
 .light-effect {
 	position: absolute;
-	top: -3%;
-	right: 5%;
 	height: 300px;
 	width: 300px;
 	background: v-bind(lightEffectColor);
 	border-radius: 50%;
 	filter: blur(60px);
 	opacity: 0.3;
+	/* Mobile: centered top */
+	top: -30%;
+	right: -25%;
 }
 
-@media (max-width: 1400px) {
-	.image-container {
-		display: none;
-	}
-
-	.text-container {
-		width: 100%;
+@media (min-width: 1024px) {
+	.light-effect {
+		/* Desktop: subtle top-right */
+		top: -3%;
+		right: 5%;
+		opacity: 0.3;
 	}
 }
 
