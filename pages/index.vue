@@ -3,7 +3,7 @@
 		<!-- Desktop -->
 		<div class="hidden lg:flex w-full min-h-screen flex-col relative overflow-hidden bg-[#edf0f1]">
 			<div class="w-full flex justify-center pt-6">
-				<div class="w-4/5 max-w-[1920px]">
+				<div class="w-full max-w-[1440px] px-10">
 					<NavigationMenu active-nav-item='home' />
 				</div>
 			</div>
@@ -11,7 +11,7 @@
 			<div class="background-lightning" />
 			<div class="background-circle" />
 
-			<div class="flex-1 flex items-center justify-center gap-8 px-12 xl:gap-12 xl:px-16 2xl:gap-16 2xl:px-20">
+			<div class="flex items-center justify-center max-w-[1440px] mx-auto w-full gap-10 px-10 pt-16">
 				<HeroLeftContent />
 
 				<HeroIllustration class="shrink-0" />
