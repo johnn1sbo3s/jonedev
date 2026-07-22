@@ -19,18 +19,20 @@
 
 		<!-- Buttons -->
 		<div class="flex flex-col lg:flex-row w-full gap-3 lg:gap-5 mt-4 max-w-[400px] z-50">
-			<SimpleButton
-				link="https://www.linkedin.com/in/joaopaulo-castro/"
-				title="LinkedIn"
-			>
-				<template #icon>
-					<img src="/img/linkedin.svg" alt="LinkedIn">
-				</template>
-			</SimpleButton>
+		<SimpleButton
+			link="https://www.linkedin.com/in/joaopaulo-castro/"
+			title="LinkedIn"
+			hover-color="#0A66C2"
+		>
+			<template #icon>
+				<img src="/img/linkedin.svg" alt="LinkedIn">
+			</template>
+		</SimpleButton>
 
 			<SimpleButton
 				link="https://github.com/johnn1sbo3s/"
 				title="GitHub"
+				hover-color="#181717"
 			>
 				<template #icon>
 					<img src="/img/github.svg" alt="GitHub">
