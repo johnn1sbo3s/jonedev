@@ -35,6 +35,7 @@
 	position: relative;
 	width: 560px;
 	height: 560px;
+	flex-shrink: 0;
 }
 
 .profile-photo {

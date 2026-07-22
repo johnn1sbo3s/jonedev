@@ -1,23 +1,25 @@
 <template>
 	<div>
 		<!-- Desktop -->
-		<div class="hidden lg:flex w-full min-h-screen flex-col items-center">
-			<div class="flex w-4/5 items-center justify-center">
-				<NavigationMenu active-nav-item='home' />
+		<div class="hidden lg:flex w-full min-h-screen flex-col relative overflow-hidden bg-[#edf0f1]">
+			<div class="w-full flex justify-center pt-6">
+				<div class="w-4/5 max-w-[1920px]">
+					<NavigationMenu active-nav-item='home' />
+				</div>
 			</div>
 
 			<div class="background-lightning" />
 			<div class="background-circle" />
 
-			<div class="w-full flex-1 flex items-center justify-center gap-16 px-10">
+			<div class="flex-1 flex items-center justify-center gap-8 px-12 xl:gap-12 xl:px-16 2xl:gap-16 2xl:px-20">
 				<HeroLeftContent />
 
-				<HeroIllustration />
+				<HeroIllustration class="shrink-0" />
 			</div>
 		</div>
 
 		<!-- Mobile -->
-		<div class="flex lg:hidden w-full min-h-screen flex-col">
+		<div class="flex lg:hidden w-full min-h-screen flex-col px-6 py-8">
 			<div class="flex justify-center mb-6">
 				<NavigationMenu active-nav-item='home' />
 			</div>
@@ -90,7 +92,7 @@
 	top: 0;
 	right: 0;
 	height: 50%;
-	width: 50%;
+	width: 40%;
 	border-radius: 100%;
 	background: #21ADFE;
 	filter: blur(100px);
