@@ -3,13 +3,13 @@
 		<!-- Desktop -->
 		<div class="hidden lg:flex w-full flex-col">
 			<div class="w-full flex justify-center">
-				<div class="w-full max-w-[1440px]">
+				<div class="w-full max-w-[1150px]">
 					<NavigationMenu active-nav-item='home' />
 				</div>
 			</div>
 
 
-			<div class="flex items-center justify-center max-w-[1440px] mx-auto w-full gap-10 pt-16">
+			<div class="flex items-center justify-center max-w-[1150px] mx-auto w-full gap-10 pt-16">
 				<HeroLeftContent />
 
 				<HeroIllustration class="shrink-0" />
