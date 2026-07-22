@@ -12,7 +12,7 @@
 
 			<div class="background-circle" />
 
-			<div class="w-full h-[60svh] -ml-12 mt-24 z-50 flex items-center justify-center gap-64">
+			<div class="w-full h-[60svh] -ml-12 mt-24 z-50 flex items-center justify-center gap-16">
 				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10 left-information">
 					<div class="text-6xl font-black flex flex-col items-start relative">
 						<img
@@ -59,30 +59,34 @@
 					</div>
 				</div>
 
-				<div class="relative justify-center illustration-container">
-					<img
-						class="ux-card"
-						src="/img/ux-card.svg"
-						alt="UX Card"
-					>
+				<div class="relative justify-center illustration-container anim-illustration">
+					<div class="profile-photo">
+						<img
+							src="/img/picture.svg"
+							alt="Picture"
+						>
+					</div>
 
-					<img
-						class="frontend-card"
-						src="/img/frontend-card.svg"
-						alt="Frontend Card"
-					>
+					<div class="orbit-path orbit-path-1">
+						<OrbitCard
+							title="UX/UI Specialist"
+							skills="Design Thinking | Figma | Framer"
+						/>
+					</div>
 
-					<img
-						class="data-science-card"
-						src="/img/data-science-card.svg"
-						alt="Data Science Card"
-					>
+					<div class="orbit-path orbit-path-2">
+						<OrbitCard
+							title="Frontend Developer"
+							skills="JavaScript | Vue.js | Nuxt.js"
+						/>
+					</div>
 
-					<img
-						src="/img/picture.svg"
-						alt="Picture"
-						width="400%"
-					>
+					<div class="orbit-path orbit-path-3">
+						<OrbitCard
+							title="Data Scientist"
+							skills="Python | Scikit-Learn | Pandas"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -196,7 +200,6 @@ function openEmail() {
 	background: #8B5CF6;
 	height: 90px;
 	width: 1200px;
-	position: absolute;
 	border-radius: 50%;
 	bottom: 180px;
 	left: -220px;
@@ -229,22 +232,81 @@ function openEmail() {
 	left: -10%;
 }
 
-.ux-card {
-	position: absolute;
-	top: 6%;
-	left: -45%;
+.illustration-container {
+	position: relative;
+	width: 560px;
+	height: 560px;
 }
 
-.frontend-card {
+.profile-photo {
 	position: absolute;
-	top: -3%;
-	right: -30%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
-.data-science-card {
+.profile-photo img {
+	width: 400px;
+	height: 400px;
+}
+
+.orbit-path {
 	position: absolute;
-	bottom: -12%;
-	right: 30%;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	z-index: 10;
+	animation: orbit-rotate 45s linear infinite;
+}
+
+.orbit-path-1 {
+	animation-delay: 0s;
+}
+
+.orbit-path-2 {
+	animation-delay: -15s;
+}
+
+.orbit-path-3 {
+	animation-delay: -30s;
+}
+
+:deep(.orbit-path .orbit-card) {
+	position: absolute;
+	transform: translate(-50%, -50%) translateX(180px);
+	animation: orbit-counter-rotate 45s linear infinite;
+}
+
+.orbit-path-1 :deep(.orbit-card) {
+	animation-delay: 0s;
+}
+
+.orbit-path-2 :deep(.orbit-card) {
+	animation-delay: -15s;
+}
+
+.orbit-path-3 :deep(.orbit-card) {
+	animation-delay: -30s;
+}
+
+@keyframes orbit-rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes orbit-counter-rotate {
+	from {
+		transform: translate(-50%, -50%) translateX(180px) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) translateX(180px) rotate(-360deg);
+	}
 }
 
 @media (max-width: 1500px) {
