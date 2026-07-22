@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<!-- Desktop -->
-		<div class="hidden lg:flex w-full min-h-screen flex-col">
-			<div class="w-full flex justify-center pt-6">
+		<div class="hidden lg:flex w-full flex-col">
+			<div class="w-full flex justify-center">
 				<div class="w-full max-w-[1440px]">
 					<NavigationMenu active-nav-item='home' />
 				</div>
