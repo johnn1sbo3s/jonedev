@@ -3,8 +3,8 @@
 		<slot name="title" />
 
 		<div class="w-full relative">
-			<!-- Image: only on desktop (lg+) -->
-			<div class="hidden lg:block absolute -top-[4%] right-0 z-10">
+			<!-- Image: only on desktop xl+ (1280px) -->
+			<div class="hidden xl:block absolute -top-[4%] right-0 z-10">
 				<img
 					:src="imageSrc"
 					alt="Project image"
@@ -13,8 +13,8 @@
 
 			<div
 				class="relative overflow-hidden w-full flex flex-col gap-4 justify-center rounded-2xl card-content
-					py-5 px-5
-					lg:h-[260px] lg:py-4 lg:px-12"
+					py-6 px-6
+					xl:py-8 xl:px-12"
 				:style="{ background: gradientColor }"
 			>
 				<img
@@ -25,12 +25,12 @@
 				>
 
 				<div
-					class="w-full lg:w-[55%] text-sm z-10"
+					class="w-full xl:w-[55%] text-sm z-10"
 				>
 					{{ text }}
 				</div>
 
-				<!-- Light effect: different positions for mobile/desktop -->
+				<!-- Light effect -->
 				<div class="light-effect" />
 			</div>
 		</div>
@@ -87,14 +87,12 @@ const computedTextColor = computed(() => props.textColor);
 	border-radius: 50%;
 	filter: blur(60px);
 	opacity: 0.3;
-	/* Mobile: centered top */
 	top: -30%;
 	right: -25%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
 	.light-effect {
-		/* Desktop: subtle top-right */
 		top: -3%;
 		right: 5%;
 		opacity: 0.3;

@@ -19,7 +19,7 @@
 		</div>
 
 		<!-- Projects -->
-		<div class="flex flex-col justify-center w-full max-w-[1150px] gap-10 lg:gap-16 my-10 lg:my-20 px-4 lg:px-0">
+		<div class="flex flex-col justify-center w-full max-w-[1150px] gap-10 lg:gap-16 mt-4 mb-10 lg:mt-8 lg:mb-20 px-4 lg:px-0">
 			<ProjectCard
 				v-for="project in projects"
 				:key="project.name"
@@ -123,7 +123,7 @@ const projects = [
 	},
 	{
 		name: 'Minha Vez',
-		text: `Minha Vez is an innovative dashboard that optimizes the management of service queues,
+		text: `Minha Vez is an innovative dashboard that optimises the management of service queues,
 			organizing daily calls based on priorities defined by the reception desk. I actively participated
 			in the initial conception of the project, creating flows and interactions that ensure an efficient
 			and intuitive user experience. In addition, I managed the development team as Scrum Master, ensuring
