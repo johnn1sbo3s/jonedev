@@ -1,7 +1,7 @@
 <template>
 	<div v-if="$device.isDesktop" class="flex justify-between justify-self-center max-w-[1920px] items-center w-full z-10">
 		<img
-			class="cursor-pointer transition-transform duration-300 hover:scale-110"
+			class="cursor-pointer"
 			src="/img/logo.svg"
 			alt="logo"
 			width="75px"
@@ -11,33 +11,33 @@
 		<div class="flex items-center gap-8 color-neutral">
 			<NuxtLink
 				to="/"
-				class="nav-link cursor-pointer h-[44px] w-[100px] flex flex-col justify-center items-center"
+				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
 				:class="activeNavItem === 'home' ? 'active-nav-item' : ''"
 			>
 				<span>Home</span>
 
 				<div
 					v-if="activeNavItem === 'home'"
-					class="w-1/3 h-[3px] bg-violet-500 border-radius-full active-indicator"
+					class="w-1/3 h-[3px] bg-violet-500 border-radius-full"
 				/>
 			</NuxtLink>
 
 			<NuxtLink
 				to="/portfolio"
-				class="nav-link cursor-pointer h-[44px] w-[100px] flex flex-col justify-center items-center"
+				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
 				:class="activeNavItem === 'portfolio' ? 'active-nav-item' : ''"
 			>
 				<span>Portfolio</span>
 
 				<div
 					v-if="activeNavItem === 'portfolio'"
-					class="w-1/3 h-[3px] bg-violet-500 active-indicator"
+					class="w-1/3 h-[3px] bg-violet-500"
 				/>
 			</NuxtLink>
 		</div>
 
 		<button
-			class="button-primary btn-primary"
+			class="button-primary hover:shadow-lg hover:shadow-violet-200"
 			@click="openEmail"
 		>
 			Contact me
@@ -105,19 +105,6 @@ function openEmail() {
 	color: #8B5CF6;
 }
 
-.active-indicator {
-	animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-	from {
-		width: 0;
-	}
-	to {
-		width: 33.333%;
-	}
-}
-
 .button-primary {
 	background-color: #8B5CF6;
 	color: #fff;
@@ -126,17 +113,11 @@ function openEmail() {
 	border-radius: 20px;
 	font-size: 16px;
 	cursor: pointer;
-	transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+	transition: background-color 0.3s ease;
 }
 
 .button-primary:hover {
 	background-color: #733BF3;
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
-}
-
-.button-primary:active {
-	transform: translateY(0);
 }
 
 </style>
