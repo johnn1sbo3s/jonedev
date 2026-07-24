@@ -9,13 +9,13 @@
 
 		<!-- Title -->
 		<div class="w-full mt-8 lg:mt-24 flex justify-center text-4xl lg:text-6xl font-black" data-animate="delay-2">
-			<div class="color-primary">My</div>
-			<div class="color-neutral">Portfolio</div>
+			<div class="color-primary">{{ $t('portfolio.my') }}</div>
+			<div class="color-neutral">{{ $t('portfolio.sectionTitle') }}</div>
 			<div class="color-primary">.</div>
 		</div>
 
 		<div class="text-lg lg:text-xl text-gray-400 font-light mt-1" data-animate="delay-3">
-			A collection of my work
+		{{ $t('portfolio.subtitle') }}
 		</div>
 
 		<!-- Projects -->
@@ -46,7 +46,7 @@
 							class="project-link text-sm bg-none cursor-pointer hover:bg-violet-200 text-violet-500 py-2 px-4 rounded-md flex items-center gap-1"
 							@click="openProject(project.link)"
 						>
-							<span>See project</span>
+							<span>{{ $t('portfolio.seeProject') }}</span>
 							<Icon name="uil:arrow-up-right" size="18" />
 						</button>
 					</div>
@@ -68,19 +68,14 @@
 
 <script setup>
 
+
 useScrollAnimation();
 
-const projects = [
+const { t, tm, rt, locale } = useI18n()
+
+const visualProps = [
 	{
 		name: 'DataPlay Bets',
-		text: `DataPlay Bets is a pre-match football betting project powered by data science.
-			Built entirely in Python with Pandas and statistical modeling, it analyzes odds,
-			league patterns, and match context to find profitable opportunities before kickoff.
-			Over the past two years, I've developed and validated more than 20 profitable models,
-			all rigorously backtested on 100,000+ matches from leagues worldwide.
-			Each model runs through a pipeline of data cleaning, feature engineering, probability estimation,
-			and post-processing filters. I use statistical distributions, custom filters, and real performance
-			metrics to track results and refine strategies.`,
 		imageSrc: '/img/dataplay-bets.svg',
 		logoSrc: '/img/dataplay-bets-logo.svg',
 		lightEffectColor: '#24D88A',
@@ -91,14 +86,6 @@ const projects = [
 	},
 	{
 		name: 'Cuida Design System',
-		text: `Cuida Design System is a scalable UI framework built to accelerate front-end development
-			with consistency and clarity. Designed from scratch with a focus on real-world usability,
-			it brings together a clean component library, token-based theming, and flexible layouts.
-			Over time, I've built and refined 30+ components for it,
-			with full support for responsive design and accessibility. The system is
-			documented, versioned, and ready for integration in fast-moving product teams. Cuida
-			isn't just a UI kit, it's a design-engineering bridge that speeds up delivery without
-			compromising on quality or UX.`,
 		imageSrc: '/img/cuida.svg',
 		logoSrc: '/img/cuida-logo.svg',
 		lightEffectColor: '#24D88A',
@@ -109,13 +96,6 @@ const projects = [
 	},
 	{
 		name: 'Dentuxo Board',
-		text: `Dentuxo Board is a Trello-style task management interface designed as a UX portfolio project,
-			in collaboration with Rafael Dias (@rafael.diasg on Instagram).
-			As a high-fidelity Figma mockup, it showcases clean visual hierarchy, intuitive drag-and-drop
-			interactions, and a layout optimized for task tracking in agile workflows. Created for the @dentuxo
-			Instagram profile, the project reflects core UX principles—clarity, consistency, and user flow.
-			Every element was crafted with intention: spacing, color, and feedback all follow best practices
-			in interface design.`,
 		imageSrc: '/img/dentuxo.svg',
 		logoSrc: '/img/dentuxo-logo.svg',
 		lightEffectColor: '#BD5D1B',
@@ -126,11 +106,6 @@ const projects = [
 	},
 	{
 		name: 'Minha Vez',
-		text: `Minha Vez is an innovative dashboard that optimizes the management of service queues,
-			organizing daily calls based on priorities defined by the reception desk. I actively participated
-			in the initial conception of the project, creating flows and interactions that ensure an efficient
-			and intuitive user experience. In addition, I managed the development team as Scrum Master, ensuring
-			the delivery of a high-quality product that transforms the way services are organized.`,
 		imageSrc: '/img/minha-vez.svg',
 		logoSrc: '/img/minha-vez-logo.svg',
 		lightEffectColor: '#736EEC',
@@ -141,12 +116,6 @@ const projects = [
 	},
 	{
 		name: 'Cidade Saudável',
-		text: `Cidade Saudável is a web platform designed to support public health management across
-			municipalities, with over 10 modules covering areas like Regulation, Endemic Control, and Family Health.
-			I designed the landing page and have been actively involved in the platform's ongoing evolution,
-			creating new modules and improving existing ones. The project has impacted more than 2 million
-			citizens and supports over 6,000 healthcare professionals. My work spans UI/UX design, front-end
-			development, and continuous improvement.`,
 		imageSrc: '/img/cidade-saudavel.svg',
 		logoSrc: '/img/cidade-saudavel-logo.svg',
 		lightEffectColor: '#26AD5B',
@@ -157,11 +126,6 @@ const projects = [
 	},
 	{
 		name: 'Habitação',
-		text: `The Housing Project streamlines government housing applications. Citizens apply through
-			an intuitive form, with the system supporting multiple programs. A robust CMS allows administrators
-			to manage these programs and applications efficiently. I was involved from the start, designing the
-			landing page and citizen forms to ensure a user-friendly experience. Additionally, I contributed
-			to the CMS development, creating a seamless process for both applicants and administrators.`,
 		imageSrc: '/img/habitacao.svg',
 		logoSrc: '',
 		lightEffectColor: '#ED3A0E',
@@ -172,11 +136,6 @@ const projects = [
 	},
 	{
 		name: 'Landing Page - Sysvale',
-		text: `I designed and assisted in the implementation of the company's landing page,
-			focusing on creating a visually appealing and user-friendly experience. The goal was to effectively
-			communicate the brand's message and guide visitors to key information and services. My contributions
-			included the initial design concepts, user interface elements, and collaboration with the development
-			team to ensure a seamless and responsive final product.`,
 		imageSrc: '/img/sysvale.svg',
 		logoSrc: '/img/sysvale-logo.svg',
 		lightEffectColor: '#012147',
@@ -187,10 +146,19 @@ const projects = [
 	},
 ]
 
+const projects = computed(() => {
+	const translated = tm('portfolio.projects')
+	if (!Array.isArray(translated)) return []
+	return translated.map((item, i) => ({
+		...item,
+		text: rt(item.description),
+		...visualProps[i],
+	}))
+})
+
 function openProject(link) {
 	window.open(link, '_blank');
 }
-
 </script>
 
 <style lang="css" scoped>
