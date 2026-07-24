@@ -6,15 +6,14 @@
 
 			<div class="color-neutral z-10">João Paulo</div>
 			<div class="color-primary z-10">Castro</div>
-			<span class="color-neutral z-10 mt-2 text-sm lg:text-xl font-semibold lg:font-semibold">
-				Product Engineer | Frontend Specialist
-			</span>
+		<span class="color-neutral z-10 mt-2 text-sm lg:text-xl font-semibold lg:font-semibold">
+			{{ $t('hero.title') }}
+		</span>
 		</div>
 
 		<!-- Description -->
 		<div class="text-base mt-2 font-light color-neutral-light w-full text-center lg:text-left">
-			Crafting impactful digital solutions for over 6 years. I build intuitive products
-			through front-end development and design, blending code and data to improve lives.
+			{{ $t('hero.description') }}
 		</div>
 
 		<!-- Buttons -->
@@ -45,7 +44,7 @@
 				href="mailto:joaopaulocastro@gmail.com"
 			>
 				<Icon name="uil:envelope" size="26" style="color: #6D99F5" />
-				<span class="color-neutral-dark">Contact me</span>
+			<span class="color-neutral-dark">{{ $t('nav.contact') }}</span>
 			</a>
 		</div>
 	</div>

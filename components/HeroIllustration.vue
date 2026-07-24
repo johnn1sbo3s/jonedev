@@ -7,23 +7,23 @@
 			>
 		</div>
 
-		<div class="orbit-path orbit-path-1">
-			<OrbitCard
-				title="UX/UI Specialist"
-				skills="Design Thinking | Figma | Framer"
-			/>
-		</div>
+	<div class="orbit-path orbit-path-1">
+		<OrbitCard
+			:title="$t('orbit.uxSpecialist')"
+			skills="Design Thinking | Figma | Framer"
+		/>
+	</div>
 
-		<div class="orbit-path orbit-path-2">
-			<OrbitCard
-				title="Frontend Developer"
-				skills="JavaScript | Vue.js | Nuxt.js"
-			/>
-		</div>
+	<div class="orbit-path orbit-path-2">
+		<OrbitCard
+			:title="$t('orbit.frontendDev')"
+			skills="JavaScript | Vue.js | Nuxt.js"
+		/>
+	</div>
 
 		<div class="orbit-path orbit-path-3">
 			<OrbitCard
-				title="Data Scientist"
+				:title="$t('orbit.dataScientist')"
 				skills="Python | Scikit-Learn | Pandas"
 			/>
 		</div>
