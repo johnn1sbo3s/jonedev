@@ -17,6 +17,7 @@
 
 		<!-- Timeline Section -->
 		<TimelineSection />
+		<AcademicSection />
 	</div>
 </template>
 

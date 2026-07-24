@@ -4,14 +4,14 @@
 
 
 		<div class="flex-1 bg-white rounded-2xl p-5 shadow-sm border border-gray-100 timeline-card">
-			<h3 class="font-semibold text-lg color-neutral-dark">
+			<h3 class="font-semibold text-lg color-neutral-dark leading-tight">
 				{{ title }}
 
-				<span class="ml-1 text-sm text-[#a78bfa]">
+				<span class="block sm:inline sm:mt-0 sm:ml-1 text-sm text-[#a78bfa]">
 					@ {{ company }}
 				</span>
 			</h3>
-			<p class="color-neutral-light mt-1">{{ description }}</p>
+			<p class="color-neutral-light mt-2">{{ description }}</p>
 			<span class="text-sm color-primary mt-2 inline-block">{{ date }}</span>
 		</div>
 	</div>
