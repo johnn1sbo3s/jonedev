@@ -27,16 +27,23 @@
 			</NuxtLink>
 		</div>
 
-		<button
-			class="button-primary hover:shadow-lg hover:shadow-violet-200 hidden lg:block"
-			@click="openEmail"
-		>
-			Contact me
-		</button>
+		<div class="flex items-center gap-4 hidden lg:flex">
+			<LanguageSwitcher />
+			<button
+				class="button-primary hover:shadow-lg hover:shadow-violet-200"
+				@click="openEmail"
+			>
+				{{ $t('nav.contact') }}
+			</button>
+		</div>
 	</div>
 </template>
 
 <script setup>
+const { t } = useI18n()
+const localePath = useLocalePath()
+const router = useRouter()
+
 defineProps({
 	activeNavItem: {
 		type: String,
@@ -44,15 +51,13 @@ defineProps({
 	}
 });
 
-const router = useRouter();
-
-const navItems = [
-	{ name: 'home', label: 'Home', path: '/' },
-	{ name: 'portfolio', label: 'Portfolio', path: '/portfolio' }
-];
+const navItems = computed(() => [
+	{ name: 'home', label: t('nav.home'), path: localePath('/') },
+	{ name: 'portfolio', label: t('nav.portfolio'), path: localePath('/portfolio') }
+]);
 
 function redirectToHome() {
-	router.push('/');
+	router.push(localePath('/'));
 }
 
 function openEmail() {
