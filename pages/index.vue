@@ -14,6 +14,9 @@
 			<!-- Illustration: only on desktop -->
 			<HeroIllustration class="hidden lg:block shrink-0" data-animate="slide-right delay-5" />
 		</div>
+
+		<!-- Timeline Section -->
+		<TimelineSection />
 	</div>
 </template>
 
