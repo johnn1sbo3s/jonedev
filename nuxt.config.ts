@@ -11,7 +11,25 @@ export default defineNuxtConfig({
 		'@nuxt/icon',
 		'@nuxt/image-edge',
 		'@nuxt/scripts',
+		'@nuxtjs/i18n',
 	],
+
+	i18n: {
+		locales: [
+			{ code: 'en', name: 'English', file: 'en.json' },
+			{ code: 'pt', name: 'Português', file: 'pt.json' },
+			{ code: 'es', name: 'Español', file: 'es.json' },
+		],
+		defaultLocale: 'en',
+		lazy: false,
+		langDir: 'locales',
+		strategy: 'prefix_except_default',
+		detectBrowserLanguage: {
+			useCookie: true,
+			cookieKey: 'i18n_redirected',
+			redirectOn: 'root',
+		},
+	},
 
 	scripts: {
 		registry: {

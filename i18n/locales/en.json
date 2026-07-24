@@ -1,0 +1,105 @@
+{
+	"nav": {
+		"home": "Home",
+		"portfolio": "Portfolio",
+		"contact": "Contact me"
+	},
+	"hero": {
+		"title": "Product Engineer – Frontend Specialist",
+		"description": "Crafting impactful digital solutions for over 6 years. I build intuitive products through front-end development and design, blending code and data to improve lives."
+	},
+	"journey": {
+		"my": "My",
+		"sectionTitle": "Journey",
+		"subtitle": "The road so far",
+		"experiences": [
+			{
+			"title": "Product Engineer – Front-end Specialist",
+				"company": "Lumos Gaming",
+				"description": "Leading front-end architecture for a large-scale iGaming platform serving users across Latin America. Focused on performance, scalability and usability in a high-traffic environment.",
+				"date": "2024 - Present"
+			},
+			{
+			"title": "Front-end Developer – UX/UI Designer",
+				"company": "Sysvale Health Tech",
+				"description": "Co-created and maintained a Design System adopted by 7+ squads across 15+ commercial projects. Led architecture decisions impacting 2M+ citizens and 6K+ health professionals in Brazil's public health system.",
+				"date": "2021 - 2024"
+			},
+			{
+				"title": "Junior Developer",
+				"company": "Sysvale Health Tech",
+				"description": "Evolved from intern to Junior Developer, building features and creating prototypes with focus on usability and user research.",
+				"date": "2019 - 2021"
+			}
+		]
+	},
+	"education": {
+		"my": "My",
+		"sectionTitle": "Education",
+		"subtitle": "Education & Certifications",
+		"items": [
+			{
+				"title": "Postgraduate Degree in Data Science",
+				"company": "Universidade da Amazônia",
+				"description": "Postgraduate studies in Data Science focusing on predictive analysis and machine learning.",
+				"date": "2024"
+			},
+			{
+				"title": "Certified Scrum Master",
+				"company": "Scrum Alliance",
+				"description": "Certification in agile methodologies, team leadership and Scrum ceremony facilitation.",
+				"date": "2022"
+			},
+			{
+				"title": "Bachelor's Degree in Computer Engineering",
+				"company": "UNIVASF",
+				"description": "Bachelor's degree in Computer Engineering with focus on software engineering and web development.",
+				"date": "2021"
+			}
+		]
+	},
+	"portfolio": {
+		"my": "My",
+		"sectionTitle": "Portfolio",
+		"subtitle": "A collection of my work",
+		"seeProject": "See project",
+		"projects": [
+			{
+				"name": "DataPlay Bets",
+				"description": "DataPlay Bets is a pre-match football betting project powered by data science. Built entirely in Python with Pandas and statistical modeling, it analyzes odds, league patterns, and match context to find profitable opportunities before kickoff. Over the past two years, I've developed and validated more than 20 profitable models, all rigorously backtested on 100,000+ matches from leagues worldwide. Each model runs through a pipeline of data cleaning, feature engineering, probability estimation, and post-processing filters. I use statistical distributions, custom filters, and real performance metrics to track results and refine strategies."
+			},
+			{
+				"name": "Cuida Design System",
+				"description": "Cuida Design System is a scalable UI framework built to accelerate front-end development with consistency and clarity. Designed from scratch with a focus on real-world usability, it brings together a clean component library, token-based theming, and flexible layouts. Over time, I've built and refined 30+ components for it, with full support for responsive design and accessibility. The system is documented, versioned, and ready for integration in fast-moving product teams. Cuida isn't just a UI kit, it's a design-engineering bridge that speeds up delivery without compromising on quality or UX."
+			},
+			{
+				"name": "Dentuxo Board",
+			"description": "Dentuxo Board is a Trello-style task management interface designed as a UX portfolio project, in collaboration with Rafael Dias ({'@'}rafael.diasg on Instagram). As a high-fidelity Figma mockup, it showcases clean visual hierarchy, intuitive drag-and-drop interactions, and a layout optimized for task tracking in agile workflows. Created for the {'@'}dentuxo Instagram profile, the project reflects core UX principles—clarity, consistency, and user flow. Every element was crafted with intention: spacing, color, and feedback all follow best practices in interface design."
+			},
+			{
+				"name": "Minha Vez",
+				"description": "Minha Vez is an innovative dashboard that optimizes the management of service queues, organizing daily calls based on priorities defined by the reception desk. I actively participated in the initial conception of the project, creating flows and interactions that ensure an efficient and intuitive user experience. In addition, I managed the development team as Scrum Master, ensuring the delivery of a high-quality product that transforms the way services are organized."
+			},
+			{
+				"name": "Cidade Saudável",
+				"description": "Cidade Saudável is a web platform designed to support public health management across municipalities, with over 10 modules covering areas like Regulation, Endemic Control, and Family Health. I designed the landing page and have been actively involved in the platform's ongoing evolution, creating new modules and improving existing ones. The project has impacted more than 2 million citizens and supports over 6,000 healthcare professionals. My work spans UI/UX design, front-end development, and continuous improvement."
+			},
+			{
+				"name": "Habitação",
+				"description": "The Housing Project streamlines government housing applications. Citizens apply through an intuitive form, with the system supporting multiple programs. A robust CMS allows administrators to manage these programs and applications efficiently. I was involved from the start, designing the landing page and citizen forms to ensure a user-friendly experience. Additionally, I contributed to the CMS development, creating a seamless process for both applicants and administrators."
+			},
+			{
+				"name": "Landing Page - Sysvale",
+				"description": "I designed and assisted in the implementation of the company's landing page, focusing on creating a visually appealing and user-friendly experience. The goal was to effectively communicate the brand's message and guide visitors to key information and services. My contributions included the initial design concepts, user interface elements, and collaboration with the development team to ensure a seamless and responsive final product."
+			}
+		]
+	},
+	"orbit": {
+		"uxSpecialist": "UX/UI Specialist",
+		"frontendDev": "Frontend Developer",
+		"dataScientist": "Data Scientist",
+		"uxSkills": "Design Thinking | Figma | Framer",
+		"frontendSkills": "JavaScript | Vue.js | Nuxt.js",
+		"dataSkills": "Python | Scikit-Learn | Pandas"
+	}
+}

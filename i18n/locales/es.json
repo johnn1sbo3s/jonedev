@@ -1,0 +1,105 @@
+{
+	"nav": {
+		"home": "Inicio",
+		"portfolio": "Portafolio",
+		"contact": "Contactame"
+	},
+	"hero": {
+		"title": "Product Engineer – Especialista en Frontend",
+		"description": "Creando soluciones digitales impactantes durante más de 6 años. Construyo productos intuitivos a través del desarrollo y diseño frontend, combinando código y datos para mejorar vidas."
+	},
+	"journey": {
+		"my": "Mi",
+		"sectionTitle": "Trayectoria",
+		"subtitle": "El camino recorrido",
+		"experiences": [
+			{
+			"title": "Product Engineer – Especialista Front-end",
+				"company": "Lumos Gaming",
+				"description": "Liderando la arquitectura front-end de una plataforma de iGaming de gran escala que atiende usuarios en América Latina. Enfocado en rendimiento, escalabilidad y usabilidad en un entorno de alto tráfico.",
+				"date": "2024 - Presente"
+			},
+			{
+			"title": "Desarrollador Front-end – Diseñador UX/UI",
+				"company": "Sysvale Health Tech",
+				"description": "Cree y mantuve un Design System adoptado por 7+ squads en 15+ proyectos comerciales. Lideré decisiones de arquitectura impactando a 2M+ ciudadanos y 6K+ profesionales de salud en el sistema público de salud de Brasil.",
+				"date": "2021 - 2024"
+			},
+			{
+				"title": "Desarrollador Junior",
+				"company": "Sysvale Health Tech",
+				"description": "Evolucioné de pasante a Desarrollador Junior, construyendo funcionalidades y creando prototipos con enfoque en usabilidad e investigación de usuarios.",
+				"date": "2019 - 2021"
+			}
+		]
+	},
+	"education": {
+		"my": "Mi",
+		"sectionTitle": "Formación",
+		"subtitle": "Formación y Certificaciones",
+		"items": [
+			{
+				"title": "Posgrado en Ciencia de Datos",
+				"company": "Universidade da Amazônia",
+				"description": "Estudios de posgrado en Ciencia de Datos enfocados en análisis predictivo y aprendizaje automático.",
+				"date": "2024"
+			},
+			{
+				"title": "Certified Scrum Master",
+				"company": "Scrum Alliance",
+				"description": "Certificación en metodologías ágiles, liderazgo de equipos y facilitación de ceremonias Scrum.",
+				"date": "2022"
+			},
+			{
+				"title": "Licenciatura en Ingeniería en Computación",
+				"company": "UNIVASF",
+				"description": "Licenciatura en Ingeniería en Computación con enfoque en ingeniería de software y desarrollo web.",
+				"date": "2021"
+			}
+		]
+	},
+	"portfolio": {
+		"my": "Mi",
+		"sectionTitle": "Portafolio",
+		"subtitle": "Una colección de mi trabajo",
+		"seeProject": "Ver proyecto",
+		"projects": [
+			{
+				"name": "DataPlay Bets",
+				"description": "DataPlay Bets es un proyecto de apuestas de fútbol pre-partido impulsado por ciencia de datos. Construido completamente en Python con Pandas y modelado estadístico, analiza cuotas, patrones de ligas y contexto de partidos para encontrar oportunidades rentables antes del inicio. En los últimos dos años, desarrollé y validé más de 20 modelos rentables, todos rigurosamente backtesteados en más de 100,000 partidos de ligas mundiales."
+			},
+			{
+				"name": "Cuida Design System",
+				"description": "Cuida Design System es un framework UI escalable construido para acelerar el desarrollo frontend con consistencia y claridad. Diseñado desde cero con enfoque en usabilidad del mundo real, reúne una biblioteca limpia de componentes, theming basado en tokens y layouts flexibles. He construido y refinado más de 30 componentes con soporte completo para diseño responsivo y accesibilidad."
+			},
+			{
+				"name": "Dentuxo Board",
+			"description": "Dentuxo Board es una interfaz de gestión de tarefas estilo Trello diseñada como proyecto de portafolio UX, en colaboración con Rafael Dias ({'@'}rafael.diasg en Instagram). Como mockup de alta fidelidad en Figma, muestra jerarquía visual limpia, interacciones intuitivas de drag-and-drop y un layout optimizado para seguimiento de tareas en flujos de trabajo ágiles."
+			},
+			{
+				"name": "Minha Vez",
+				"description": "Minha Vez es un dashboard innovador que optimiza la gestión de filas de atención, organizando llamadas diarias según prioridades definidas por el mostrador de recepción. Participé activamente en la concepción inicial del proyecto, creando flujos e interacciones que garantizan una experiencia de usuario eficiente e intuitiva. Además, gestioné el equipo de desarrollo como Scrum Master."
+			},
+			{
+				"name": "Cidade Saudável",
+				"description": "Cidade Saudável es una plataforma web diseñada para apoyar la gestión de salud pública en municipios, con más de 10 módulos que cubren áreas como Regulación, Control de Endemias y Salud Familiar. Diseñé la landing page y estuve activamente involucrado en la evolución continua de la plataforma. El proyecto ha impactado a más de 2 millones de ciudadanos y atiende a más de 6,000 profesionales de salud."
+			},
+			{
+				"name": "Habitação",
+				"description": "El Proyecto de Vivienda agiliza las solicitudes de vivienda gubernamentales. Los ciudadanos se inscriben a través de un formulario intuitivo, con el sistema soportando múltiples programas. Un CMS robusto permite a los administradores gestionar estos programas y solicitudes de manera eficiente. Estuve involucrado desde el inicio, diseñando la landing page y formularios ciudadanos."
+			},
+			{
+				"name": "Landing Page - Sysvale",
+				"description": "Diseñé y asistí en la implementación de la landing page de la empresa, enfocándome en crear una experiencia visualmente atractiva y fácil de usar. El objetivo era comunicar efectivamente el mensaje de la marca y guiar a los visitantes hacia información y servicios clave. Mis contribuciones incluyeron conceptos iniciales de diseño, elementos de interfaz de usuario y colaboración con el equipo de desarrollo."
+			}
+		]
+	},
+	"orbit": {
+		"uxSpecialist": "Especialista UX/UI",
+		"frontendDev": "Desarrollador Frontend",
+		"dataScientist": "Científico de Datos",
+		"uxSkills": "Design Thinking | Figma | Framer",
+		"frontendSkills": "JavaScript | Vue.js | Nuxt.js",
+		"dataSkills": "Python | Scikit-Learn | Pandas"
+	}
+}

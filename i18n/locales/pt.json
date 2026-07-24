@@ -1,0 +1,105 @@
+{
+	"nav": {
+		"home": "Início",
+		"portfolio": "Portfólio",
+		"contact": "Fale comigo"
+	},
+	"hero": {
+		"title": "Product Engineer – Especialista em Frontend",
+		"description": "Criando soluções digitais impactantes há mais de 6 anos. Construo produtos intuitivos através de desenvolvimento e design frontend, unindo código e dados para melhorar vidas."
+	},
+	"journey": {
+		"my": "Minha",
+		"sectionTitle": "Jornada",
+		"subtitle": "O caminho até aqui",
+		"experiences": [
+			{
+			"title": "Product Engineer – Especialista Front-end",
+				"company": "Lumos Gaming",
+				"description": "Liderando a arquitetura front-end de uma plataforma de iGaming de grande escala atendendo usuários na América Latina. Focado em performance, escalabilidade e usabilidade em ambiente de alto tráfego.",
+				"date": "2024 - Presente"
+			},
+			{
+			"title": "Desenvolvedor Front-end – Designer UX/UI",
+				"company": "Sysvale Health Tech",
+				"description": "Criei e mantive um Design System adotado por 7+ squads em 15+ projetos comerciais. Lidei decisões de arquitetura impactando 2M+ cidadãos e 6K+ profissionais de saúde no sistema público de saúde do Brasil.",
+				"date": "2021 - 2024"
+			},
+			{
+				"title": "Desenvolvedor Júnior",
+				"company": "Sysvale Health Tech",
+				"description": "Evoluí de estagiário para Desenvolvedor Júnior, construindo funcionalidades e criando protótipos com foco em usabilidade e pesquisa com usuários.",
+				"date": "2019 - 2021"
+			}
+		]
+	},
+	"education": {
+		"my": "Minha",
+		"sectionTitle": "Formação",
+		"subtitle": "Formação & Certificações",
+		"items": [
+			{
+				"title": "Pós-graduação em Ciência de Dados",
+				"company": "Universidade da Amazônia",
+				"description": "Estudos de pós-graduação em Ciência de Dados com foco em análise preditiva e aprendizado de máquina.",
+				"date": "2024"
+			},
+			{
+				"title": "Certified Scrum Master",
+				"company": "Scrum Alliance",
+				"description": "Certificação em metodologias ágeis, liderança de equipes e facilitação de cerimônias Scrum.",
+				"date": "2022"
+			},
+			{
+				"title": "Bacharelado em Engenharia da Computação",
+				"company": "UNIVASF",
+				"description": "Bacharelado em Engenharia da Computação com foco em engenharia de software e desenvolvimento web.",
+				"date": "2021"
+			}
+		]
+	},
+	"portfolio": {
+		"my": "Meu",
+		"sectionTitle": "Portfólio",
+		"subtitle": "Uma coleção do meu trabalho",
+		"seeProject": "Ver projeto",
+		"projects": [
+			{
+				"name": "DataPlay Bets",
+				"description": "DataPlay Bets é um projeto de apostas futebolísticas pré-partida movido a ciência de dados. Construído inteiramente em Python com Pandas e modelagem estatística, analisa odds, padrões de ligas e contexto de partidas para encontrar oportunidades lucrativas antes do início. Nos últimos dois anos, desenvolvi e validei mais de 20 modelos lucrativos, todos rigorosamente backtestados em mais de 100.000 partidas de ligas mundial. Cada modelo passa por um pipeline de limpeza de dados, engenharia de features, estimação de probabilidade e filtros de pós-processamento."
+			},
+			{
+				"name": "Cuida Design System",
+				"description": "Cuida Design System é uma framework UI escalável construída para acelerar o desenvolvimento front-end com consistência e clareza. Projetado do zero com foco em usabilidade no mundo real, reúne uma biblioteca de componentes limpa, theming baseado em tokens e layouts flexíveis. Ao longo do tempo, construí e refinei mais de 30 componentes, com suporte completo para design responsivo e acessibilidade. O sistema é documentado, versionado e pronto para integração em equipes de produto ágeis."
+			},
+			{
+				"name": "Dentuxo Board",
+			"description": "Dentuxo Board é uma interface de gerenciamento de tarefas estilo Trello projetada como um projeto de portfólio UX, em colaboração com Rafael Dias ({'@'}rafael.diasg no Instagram). Como um mockup de alta fidelidade no Figma, demonstra hierarquia visual limpa, interações intuitivas de drag-and-drop e um layout otimizado para rastreamento de tarefas em fluxos de trabalho ágeis."
+			},
+			{
+				"name": "Minha Vez",
+				"description": "Minha Vez é um dashboard inovador que otimiza o gerenciamento de filas de atendimento, organizando chamadas diárias com base em prioridades definidas pelo balcão de recepção. Participei ativamente da concepção inicial do projeto, criando fluxos e interações que garantem uma experiência de usuário eficiente e intuitiva. Além disso, gerenciei a equipe de desenvolvimento como Scrum Master."
+			},
+			{
+				"name": "Cidade Saudável",
+				"description": "Cidade Saudável é uma plataforma web projetada para apoiar a gestão da saúde pública em municípios, com mais de 10 módulos cobrindo áreas como Regulação, Controle de Endemias e Saúde da Família. Projetei a landing page e estive ativamente envolvido na evolução contínua da plataforma. O projeto impactou mais de 2 milhões de cidadãos e atende mais de 6.000 profissionais de saúde."
+			},
+			{
+				"name": "Habitação",
+				"description": "O Projeto Habitação simplifica inscrições em programas governamentais de habitação. Cidadãos se inscrevem através de um formulário intuitivo, com o sistema suportando múltiplos programas. Um CMS robusto permite que administradores gerenciem esses programas e inscrições de forma eficiente. Estive envolvido desde o início, projetando a landing page e formulários para cidadãos."
+			},
+			{
+				"name": "Landing Page - Sysvale",
+				"description": "Projetei e auxiliei na implementação da landing page da empresa, focando em criar uma experiência visualmente atraente e amigável ao usuário. O objetivo era comunicar efetivamente a mensagem da marca e guiar os visitantes até informações e serviços-chave. Minhas contribuições incluíram conceitos iniciais de design, elementos de interface do usuário e colaboração com a equipe de desenvolvimento."
+			}
+		]
+	},
+	"orbit": {
+		"uxSpecialist": "Especialista UX/UI",
+		"frontendDev": "Desenvolvedor Frontend",
+		"dataScientist": "Cientista de Dados",
+		"uxSkills": "Design Thinking | Figma | Framer",
+		"frontendSkills": "JavaScript | Vue.js | Nuxt.js",
+		"dataSkills": "Python | Scikit-Learn | Pandas"
+	}
+}
