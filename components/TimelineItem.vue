@@ -10,12 +10,12 @@
 			<h3 class="font-semibold text-lg color-neutral-dark">
 				{{ title }}
 
-				<span class="ml-1 font-light text-sm text-[#a78bfa]">
+				<span class="ml-1 text-sm text-[#a78bfa]">
 					@ {{ company }}
 				</span>
 			</h3>
-			<p class="text-gray-500 mt-1 font-light">{{ description }}</p>
-			<span class="text-sm color-primary font-medium mt-2 inline-block">{{ date }}</span>
+			<p class="color-neutral-light mt-1">{{ description }}</p>
+			<span class="text-sm color-primary mt-2 inline-block">{{ date }}</span>
 		</div>
 	</div>
 </template>
