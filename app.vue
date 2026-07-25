@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full min-h-screen background-design px-6 py-4 lg:px-10 lg:py-8 relative overflow-hidden">
-		<div class="background-lightning" />
+		<div class="background-lightning hidden sm:block" />
 		<div class="background-circle" />
 		<div class="w-full lg:hidden flex items-center justify-center border-b border-black/5">
 			<div class="max-w-[1150px] mx-auto w-full pb-3">
