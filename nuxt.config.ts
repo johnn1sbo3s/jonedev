@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2025-05-15',
 	devtools: { enabled: false },
+	future: {
+		compatibilityVersion: 4,
+	},
 
 	modules: [
 		'@nuxt/eslint',
@@ -9,7 +12,6 @@ export default defineNuxtConfig({
 		'@nuxt/fonts',
 		'@nuxtjs/device',
 		'@nuxt/icon',
-		'@nuxt/image-edge',
 		'@nuxt/scripts',
 		'@nuxtjs/i18n',
 	],
