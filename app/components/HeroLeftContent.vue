@@ -1,52 +1,41 @@
 <template>
-	<div class="flex flex-col gap-2 min-w-0 shrink items-center lg:items-start">
-		<div class="text-5xl lg:text-6xl font-black flex flex-col items-center lg:items-start relative">
-			<div class="absolute -left-4 -top-2 h-28 w-28 lg:-left-6 lg:-top-3 lg:h-36 lg:w-36 rounded-full bg-white/40 border-l-2 border-violet-200/80" />
+  <div class="flex min-w-0 shrink flex-col items-center gap-2 lg:items-start">
+    <div class="relative flex flex-col items-center text-5xl font-black lg:items-start lg:text-6xl">
+      <div class="absolute -top-2 -left-4 h-28 w-28 rounded-full border-l-2 border-violet-200/80 bg-white/40 lg:-top-3 lg:-left-6 lg:h-36 lg:w-36" />
 
-			<div class="color-neutral z-10">João Paulo</div>
-			<div class="color-primary z-10">Castro</div>
-		<span class="color-neutral z-10 mt-2 text-sm lg:text-xl font-semibold lg:font-semibold">
-			{{ $t('hero.title') }}
-		</span>
-		</div>
+      <div class="color-neutral z-10">João Paulo</div>
 
-		<div class="text-base mt-2 font-light color-neutral-light w-full text-center lg:text-left">
-			{{ $t('hero.description') }}
-		</div>
+      <div class="color-primary z-10">Castro</div>
 
-		<div class="flex flex-col lg:flex-row w-full gap-2 mt-4 max-w-[400px] z-50">
-		<SimpleButton
-			link="https://www.linkedin.com/in/joaopaulo-castro/"
-			title="LinkedIn"
-			hover-color="#0A66C2"
-		>
-			<template #icon>
-				<Icon name="lucide:linkedin" :size="22" style="color: #6D99F5" />
-			</template>
-		</SimpleButton>
+      <span class="color-neutral z-10 mt-2 text-sm font-semibold lg:text-xl lg:font-semibold">
+        {{ $t('hero.title') }}
+      </span>
+    </div>
 
-			<SimpleButton
-				link="https://github.com/johnn1sbo3s/"
-				title="GitHub"
-				hover-color="#181717"
-			>
-				<template #icon>
-					<Icon name="lucide:github" :size="22" style="color: #6D99F5" />
-				</template>
-			</SimpleButton>
+    <div class="color-neutral-light mt-2 w-full text-center text-base font-light lg:text-left">
+      {{ $t('hero.description') }}
+    </div>
 
-			<div class="lg:hidden">
-				<SimpleButton
-					link="mailto:joaopaulocastro@gmail.com"
-					:title="$t('nav.contact')"
-					hover-color="#6D99F5"
-				>
-					<template #icon>
-						<Icon name="lucide:mail" :size="22" style="color: #6D99F5" />
-					</template>
-				</SimpleButton>
-			</div>
-		</div>
-	</div>
+    <div class="z-50 mt-4 flex w-full max-w-[400px] flex-col gap-2 lg:flex-row">
+      <SimpleButton link="https://www.linkedin.com/in/joaopaulo-castro/" title="LinkedIn" hover-color="#0A66C2">
+        <template #icon>
+          <Icon name="lucide:linkedin" :size="22" style="color: #6d99f5" />
+        </template>
+      </SimpleButton>
+
+      <SimpleButton link="https://github.com/johnn1sbo3s/" title="GitHub" hover-color="#181717">
+        <template #icon>
+          <Icon name="lucide:github" :size="22" style="color: #6d99f5" />
+        </template>
+      </SimpleButton>
+
+      <div class="lg:hidden">
+        <SimpleButton link="mailto:joaopaulocastro@gmail.com" :title="$t('nav.contact')" hover-color="#6D99F5">
+          <template #icon>
+            <Icon name="lucide:mail" :size="22" style="color: #6d99f5" />
+          </template>
+        </SimpleButton>
+      </div>
+    </div>
+  </div>
 </template>
-
