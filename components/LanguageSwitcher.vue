@@ -24,6 +24,7 @@ const availableLocales = computed(() => {
 .language-switcher {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 4px;
 }
 

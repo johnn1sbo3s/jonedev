@@ -1,5 +1,5 @@
 <template>
-	<div class="flex justify-between items-center w-full z-10">
+	<div class="flex justify-between items-center w-full z-10 mt-3 lg:mt-0">
 		<img
 			class="cursor-pointer hidden lg:block"
 			src="/img/logo.svg"
