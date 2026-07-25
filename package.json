@@ -7,7 +7,19 @@
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"postinstall": "nuxt prepare",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"type-check": "vue-tsc --noEmit",
+		"format:tailwind": "prettier --write \"**/*.{vue,ts}\"",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*.{js,ts,vue}": [
+			"eslint --fix"
+		],
+		"*.vue": "node scripts/check-script-order.cjs",
+		"*.{vue,ts}": "node scripts/check-arbitrary-values.cjs"
 	},
 	"dependencies": {
 		"@nuxt/eslint": "^1.16.0",
@@ -18,7 +30,7 @@
 		"@nuxtjs/i18n": "^10.5.0",
 		"@nuxtjs/tailwindcss": "^7.0.0-beta.1",
 		"@unhead/vue": "^3.2.3",
-		"eslint": "^9.28.0",
+		"eslint": "^10.8.0",
 		"nuxt": "^4.5.0",
 		"tailwindcss": "^4.3.3",
 		"typescript": "^5.8.3",
@@ -28,6 +40,12 @@
 	"devDependencies": {
 		"@iconify-json/lucide": "^1.2.119",
 		"@iconify-json/uil": "^1.2.3",
-		"playwright": "^1.61.1"
+		"eslint-config-prettier": "^10.1.8",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.2.0",
+		"playwright": "^1.61.1",
+		"prettier": "^3.9.6",
+		"prettier-plugin-tailwindcss": "^0.8.1",
+		"vue-tsc": "^3.3.8"
 	}
 }
