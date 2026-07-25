@@ -27,7 +27,7 @@
 			</NuxtLink>
 		</div>
 
-		<div class="flex items-center gap-4 hidden lg:flex">
+		<div class="items-center gap-4 hidden lg:flex">
 			<LanguageSwitcher />
 			<button
 				class="button-primary hover:shadow-lg hover:shadow-violet-200"
