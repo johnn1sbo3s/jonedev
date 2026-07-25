@@ -39,7 +39,7 @@ defineProps({
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	padding: 0.5rem 1.75rem;
+	padding: 0.75rem 1.75rem;
 	border-radius: 1rem;
 	cursor: pointer;
 	z-index: 50;
@@ -81,7 +81,7 @@ defineProps({
 	color: white;
 }
 
-.simple-button:hover :deep(img) {
+.simple-button:hover :deep(svg) {
 	filter: brightness(0) invert(1);
 }
 
