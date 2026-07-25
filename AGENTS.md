@@ -124,16 +124,17 @@ Installed in `nuxt.config.ts`:
 2. `@nuxtjs/tailwindcss` — Tailwind CSS
 3. `@nuxt/fonts` — Font loading (Lexend)
 4. `@nuxtjs/device` — Device detection (installed but **avoid using** — prefer Tailwind responsive classes)
-5. `nuxt-icon` — Icon component
-6. `@nuxt/image-edge` — Image optimization
-7. `nuxt-scripts` — Microsoft Clarity analytics (id: `ruuv9lie14`)
+5. `nuxt-icon` — Icon component (used for `uil:arrow-up-right` in portfolio.vue)
+6. `lucide-vue-next` — Lucide icon library for inline SVG icons (LinkedIn, GitHub, Mail in hero)
+7. `@nuxt/image-edge` — Image optimization
+8. `nuxt-scripts` — Microsoft Clarity analytics (id: `ruuv9lie14`)
 
 ## Static Assets
 
-All in `public/img/` — 20 SVGs + 1 PNG:
+All in `public/img/` — 18 SVGs + 1 PNG:
 - **Profile:** `picture.svg`
 - **Project images:** project-specific SVGs (e.g., `project-*.svg`)
-- **Logos:** `linkedin.svg`, `github.svg`, `vercel.svg`, `nuxt.svg`, `vuejs.svg`, `tailwindcss.svg`
+- **Logos:** `vercel.svg`, `nuxt.svg`, `vuejs.svg`, `tailwindcss.svg`
 - **Backgrounds:** `bg-texture.png` (appears unused)
 
 ## Testing & QA

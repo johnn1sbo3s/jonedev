@@ -13,6 +13,9 @@ export default defineNuxtConfig({
 		'@nuxt/scripts',
 		'@nuxtjs/i18n',
 	],
+	icon: {
+		mode: 'svg',
+	},
 
 	i18n: {
 		locales: [
