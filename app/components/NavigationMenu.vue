@@ -42,7 +42,7 @@ function redirectToHome() {
 }
 
 function openEmail() {
-  window.location.href = 'mailto:joaopaulocastro@gmail.com'
+  window.location.href = 'mailto:joaopaulosncastro@gmail.com'
 }
 </script>
 

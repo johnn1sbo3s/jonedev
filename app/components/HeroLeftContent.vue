@@ -30,7 +30,7 @@
       </SimpleButton>
 
       <div class="lg:hidden">
-        <SimpleButton link="mailto:joaopaulocastro@gmail.com" :title="$t('nav.contact')" hover-color="#6D99F5">
+        <SimpleButton link="mailto:joaopaulosncastro@gmail.com" :title="$t('nav.contact')" hover-color="#6D99F5">
           <template #icon>
             <Icon name="lucide:mail" :size="22" style="color: #6d99f5" />
           </template>
