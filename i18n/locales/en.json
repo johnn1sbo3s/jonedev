@@ -65,6 +65,10 @@
 		"seeProject": "See project",
 		"projects": [
 			{
+				"name": "Lumos Gaming",
+				"description": "Lumos Gaming is a whitelabel iGaming platform built with a multi-tenant, multi-theme architecture, designed to deliver a complete online betting and gaming experience to operators worldwide. The system supports multiple operators with independent theme customization while sharing a scalable, performance-driven infrastructure. I contributed to the front-end architecture, implementing modular components, a dynamic theming system, and loading optimizations that ensure a smooth experience across devices. The project was engineered to scale horizontally, handling high volumes of concurrent users with minimal latency."
+			},
+			{
 				"name": "DataPlay Bets",
 				"description": "DataPlay Bets is a pre-match football betting project powered by data science. Built entirely in Python with Pandas and statistical modeling, it analyzes odds, league patterns, and match context to find profitable opportunities before kickoff. Over the past two years, I've developed and validated more than 20 profitable models, all rigorously backtested on 100,000+ matches from leagues worldwide. Each model runs through a pipeline of data cleaning, feature engineering, probability estimation, and post-processing filters. I use statistical distributions, custom filters, and real performance metrics to track results and refine strategies."
 			},
@@ -88,11 +92,11 @@
 				"name": "Habitação",
 				"description": "The Habitação Project streamlines government housing applications. Citizens apply through an intuitive form, with the system supporting multiple programs. A robust CMS allows administrators to manage these programs and applications efficiently. I was involved from the start, designing the landing page and citizen forms to ensure a user-friendly experience. Additionally, I contributed to the CMS development, creating a seamless process for both applicants and administrators."
 			},
-			{
-				"name": "Landing Page - Sysvale",
-				"description": "I designed and assisted in the implementation of the company's landing page, focusing on creating a visually appealing and user-friendly experience. The goal was to effectively communicate the brand's message and guide visitors to key information and services. My contributions included the initial design concepts, user interface elements, and collaboration with the development team to ensure a seamless and responsive final product."
-			}
-		]
+      {
+        "name": "Landing Page - Sysvale",
+        "description": "I designed and assisted in the implementation of the company's landing page, focusing on creating a visually appealing and user-friendly experience. The goal was to effectively communicate the brand's message and guide visitors to key information and services. My contributions included the initial design concepts, user interface elements, and collaboration with the development team to ensure a seamless and responsive final product."
+      }
+    ]
 	},
 	"orbit": {
 		"uxSpecialist": "UX/UI Specialist",

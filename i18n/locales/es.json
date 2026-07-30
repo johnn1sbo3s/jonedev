@@ -65,6 +65,10 @@
 		"seeProject": "Ver proyecto",
 		"projects": [
 			{
+				"name": "Lumos Gaming",
+				"description": "Lumos Gaming es una plataforma whitelabel de iGaming construida con arquitectura multi-tenant y multi-theme, diseñada para ofrecer una experiencia completa de apuestas y juegos en línea a operadores de todo el mundo. El sistema soporta múltiples operadores con personalización independiente de temas, compartiendo una infraestructura escalable orientada a rendimiento. Participé en el desarrollo de la arquitectura front-end, implementando componentes modulares, un sistema de theming dinámico y optimizaciones que garantizan una experiencia fluida en distintos dispositivos. El proyecto fue diseñado para escalar horizontalmente, soportando alto volumen de usuarios simultáneos con latencia mínima."
+			},
+			{
 				"name": "DataPlay Bets",
 				"description": "DataPlay Bets es un proyecto de apuestas de fútbol pre-partido impulsado por ciencia de datos. Construido completamente en Python con Pandas y modelado estadístico, analiza cuotas, patrones de ligas y contexto de partidos para encontrar oportunidades rentables antes del inicio. En los últimos dos años, desarrollé y validé más de 20 modelos rentables, todos rigurosamente backtesteados en más de 100,000 partidos de ligas mundiales."
 			},
@@ -90,9 +94,9 @@
 			},
 			{
 				"name": "Landing Page - Sysvale",
-				"description": "Diseñé y asistí en la implementación de la landing page de la empresa, enfocándome en crear una experiencia visualmente atractiva y fácil de usar. El objetivo era comunicar efectivamente el mensaje de la marca y guiar a los visitantes hacia información y servicios clave. Mis contribuciones incluyeron conceptos iniciales de diseño, elementos de interfaz de usuario y colaboración con el equipo de desarrollo."
-			}
-		]
+        "description": "Diseñé y asistí en la implementación de la landing page de la empresa, enfocándome en crear una experiencia visualmente atractiva y fácil de usar. El objetivo era comunicar efectivamente el mensaje de la marca y guiar a los visitantes hacia información y servicios clave. Mis contribuciones incluyeron conceptos iniciales de diseño, elementos de interfaz de usuario y colaboración con el equipo de desarrollo."
+      }
+    ]
 	},
 	"orbit": {
 		"uxSpecialist": "Especialista UX/UI",

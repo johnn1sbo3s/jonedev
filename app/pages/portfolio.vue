@@ -22,20 +22,20 @@
       <ProjectCard v-for="project in projects" :key="project.name" :text="project.text" :image-src="project.imageSrc" :light-effect-color="project.lightEffectColor" :text-color="project.textColor" :gradient-color="project.gradient" :logo-src="project.logoSrc" data-animate>
         <template #title>
           <div class="hidden items-center justify-between gap-3 lg:flex">
-            <div class="flex cursor-pointer gap-1 text-2xl font-bold hover:underline" :style="{ color: project.titleColor }" @click="openProject(project.link)">
+            <div class="flex gap-1 text-2xl font-bold" :class="project.link ? 'cursor-pointer hover:underline' : ''" :style="{ color: project.titleColor }" @click="openProject(project.link)">
               {{ project.name }}
             </div>
 
-            <button class="project-link flex cursor-pointer items-center gap-1 rounded-md bg-none px-4 py-2 text-sm text-violet-500 hover:bg-violet-200" @click="openProject(project.link)">
+            <button v-if="project.link" class="project-link flex cursor-pointer items-center gap-1 rounded-md bg-none px-4 py-2 text-sm text-violet-500 hover:bg-violet-200" @click="openProject(project.link)">
               <span>{{ $t('portfolio.seeProject') }}</span>
 
               <Icon name="uil:arrow-up-right" size="18" />
             </button>
           </div>
 
-          <div class="flex w-fit cursor-pointer items-center gap-2 text-xl font-bold hover:underline lg:hidden" :style="{ color: project.titleColor }" @click="openProject(project.link)">
+          <div class="flex w-fit items-center gap-2 text-xl font-bold lg:hidden" :class="project.link ? 'cursor-pointer hover:underline' : ''" :style="{ color: project.titleColor }" @click="openProject(project.link)">
             {{ project.name }}
-            <Icon class="mt-0.5" name="uil:arrow-up-right" size="24" />
+            <Icon v-if="project.link" class="mt-0.5" name="uil:arrow-up-right" size="24" />
           </div>
         </template>
       </ProjectCard>
@@ -49,6 +49,16 @@ useScrollAnimation()
 const { tm, rt } = useI18n()
 
 const visualProps = [
+  {
+    name: 'Lumos Gaming',
+    imageSrc: '/img/lumos-gaming.svg',
+    logoSrc: '',
+    lightEffectColor: '#F7CF7A',
+    gradient: 'linear-gradient(72deg, #E5B754 -8.58%, #C99F45 36.98%, #8E6E29 105.59%)',
+    titleColor: '#E5B754',
+    textColor: 'white',
+    link: '',
+  },
   {
     name: 'DataPlay Bets',
     imageSrc: '/img/dataplay-bets.svg',
@@ -132,6 +142,7 @@ const projects = computed(() => {
 })
 
 function openProject(link) {
+  if (!link) return
   window.open(link, '_blank')
 }
 </script>
