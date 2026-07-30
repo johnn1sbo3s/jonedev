@@ -92,11 +92,11 @@
 				"name": "Habitação",
 				"description": "The Habitação Project streamlines government housing applications. Citizens apply through an intuitive form, with the system supporting multiple programs. A robust CMS allows administrators to manage these programs and applications efficiently. I was involved from the start, designing the landing page and citizen forms to ensure a user-friendly experience. Additionally, I contributed to the CMS development, creating a seamless process for both applicants and administrators."
 			},
-      {
-        "name": "Landing Page - Sysvale",
-        "description": "I designed and assisted in the implementation of the company's landing page, focusing on creating a visually appealing and user-friendly experience. The goal was to effectively communicate the brand's message and guide visitors to key information and services. My contributions included the initial design concepts, user interface elements, and collaboration with the development team to ensure a seamless and responsive final product."
-      }
-    ]
+			{
+				"name": "Landing Page - Sysvale",
+				"description": "I designed and assisted in the implementation of the company's landing page, focusing on creating a visually appealing and user-friendly experience. The goal was to effectively communicate the brand's message and guide visitors to key information and services. My contributions included the initial design concepts, user interface elements, and collaboration with the development team to ensure a seamless and responsive final product."
+			}
+		]
 	},
 	"orbit": {
 		"uxSpecialist": "UX/UI Specialist",
