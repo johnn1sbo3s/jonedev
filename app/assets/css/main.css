@@ -1,21 +1,34 @@
+:root {
+  --color-primary: #8B5CF6;
+  --color-primary-hover: #733bf3;
+  --color-primary-light: #a78bfa;
+  --color-primary-bg-light: rgba(139, 92, 246, 0.08);
+  --color-primary-bg: rgba(139, 92, 246, 0.12);
+  --color-neutral: #3C3842;
+  --color-neutral-dark: #19161D;
+  --color-neutral-light: #65626A;
+  --color-background: #edf0f1;
+  --color-icon: #6d99f5;
+}
+
 div {
   font-family: 'Lexend', sans-serif;
 }
 
 .color-primary {
-  color: #8B5CF6;
+  color: var(--color-primary);
 }
 
 .color-neutral {
-  color: #3C3842;
+  color: var(--color-neutral);
 }
 
 .color-neutral-dark {
-  color: #19161D;
+  color: var(--color-neutral-dark);
 }
 
 .color-neutral-light {
-  color: #65626A;
+  color: var(--color-neutral-light);
 }
 
 /* =========================================================

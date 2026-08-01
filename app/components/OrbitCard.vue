@@ -10,24 +10,15 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  skills: {
-    type: String,
-    required: true,
-  },
-  delay: {
-    type: Number,
-    default: 0,
-  },
-  skillGradient: {
-    type: String,
-    default: 'linear-gradient(90deg, #9D78F1 0%, #6C9AF5 50%, #21ADFE 100%)',
-  },
+<script setup lang="ts">
+withDefaults(defineProps<{
+  title: string
+  skills: string
+  delay?: number
+  skillGradient?: string
+}>(), {
+  delay: 0,
+  skillGradient: 'linear-gradient(90deg, #9D78F1 0%, #6C9AF5 50%, #21ADFE 100%)',
 })
 </script>
 

@@ -16,26 +16,32 @@
       {{ $t('hero.description') }}
     </div>
 
-    <div class="z-50 mt-4 flex w-full max-w-[400px] flex-col gap-2 lg:flex-row">
+    <div class="z-50 mt-4 flex w-full max-w-100 flex-col gap-2 lg:flex-row">
       <SimpleButton link="https://www.linkedin.com/in/joaopaulo-castro/" title="LinkedIn" hover-color="#0A66C2">
         <template #icon>
-          <Icon name="lucide:linkedin" :size="22" style="color: #6d99f5" />
+          <Icon name="lucide:linkedin" :size="22" style="color: var(--color-icon)" />
         </template>
       </SimpleButton>
 
       <SimpleButton link="https://github.com/johnn1sbo3s/" title="GitHub" hover-color="#181717">
         <template #icon>
-          <Icon name="lucide:github" :size="22" style="color: #6d99f5" />
+          <Icon name="lucide:github" :size="22" style="color: var(--color-icon)" />
         </template>
       </SimpleButton>
 
       <div class="lg:hidden">
-        <SimpleButton link="mailto:joaopaulosncastro@gmail.com" :title="$t('nav.contact')" hover-color="#6D99F5">
+        <SimpleButton :link="contactLink" :title="$t('nav.contact')" hover-color="#6D99F5">
           <template #icon>
-            <Icon name="lucide:mail" :size="22" style="color: #6d99f5" />
+            <Icon name="lucide:mail" :size="22" style="color: var(--color-icon)" />
           </template>
         </SimpleButton>
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { CONTACT_EMAIL } from '~/utils/constants'
+
+const contactLink = `mailto:${CONTACT_EMAIL}`
+</script>

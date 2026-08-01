@@ -14,8 +14,11 @@ export function useScrollAnimation() {
       { threshold: 0.1 },
     )
 
-    document.querySelectorAll('[data-animate]').forEach((el) => {
-      observer.value?.observe(el)
+    // Observe all [data-animate] elements after DOM is ready
+    nextTick(() => {
+      document.querySelectorAll('[data-animate]').forEach((el) => {
+        observer.value?.observe(el)
+      })
     })
   })
 
@@ -23,8 +26,10 @@ export function useScrollAnimation() {
     observer.value?.disconnect()
   })
 
-  function observe(el: HTMLElement) {
-    observer.value?.observe(el)
+  function observe(el: HTMLElement | null) {
+    if (el && observer.value) {
+      observer.value.observe(el)
+    }
   }
 
   return { observe }

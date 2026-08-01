@@ -1,17 +1,23 @@
 <template>
   <div class="language-switcher">
-    <button v-for="loc in availableLocales" :key="loc.code" class="lang-btn" :class="{ active: locale === loc.code }" @click="setLocale(loc.code)">
+    <button v-for="loc in availableLocales" :key="loc.code" class="lang-btn" :class="{ active: locale === loc.code }" @click="switchLocale(loc.code)">
       {{ loc.code.toUpperCase() }}
     </button>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { locale, locales, setLocale } = useI18n()
 
 const availableLocales = computed(() => {
-  return locales.value.filter((l) => typeof l === 'object')
+  return (locales.value as Array<{ code: string; name: string }>).filter(
+    (l) => typeof l === 'object',
+  )
 })
+
+function switchLocale(code: string) {
+  setLocale(code as 'en' | 'pt' | 'es')
+}
 </script>
 
 <style lang="css" scoped>
@@ -30,18 +36,18 @@ const availableLocales = computed(() => {
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  color: #65626a;
+  color: var(--color-neutral-light);
   transition: all 0.2s ease;
   letter-spacing: 0.5px;
 }
 
 .lang-btn:hover {
-  color: #8b5cf6;
-  background-color: rgba(139, 92, 246, 0.08);
+  color: var(--color-primary);
+  background-color: var(--color-primary-bg-light);
 }
 
 .lang-btn.active {
-  color: #8b5cf6;
-  background-color: rgba(139, 92, 246, 0.12);
+  color: var(--color-primary);
+  background-color: var(--color-primary-bg);
 }
 </style>

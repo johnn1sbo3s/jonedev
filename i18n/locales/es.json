@@ -66,35 +66,91 @@
 		"projects": [
 			{
 				"name": "Lumos Gaming",
-				"description": "Lumos Gaming es una plataforma whitelabel de iGaming construida con arquitectura multi-tenant y multi-theme, diseñada para ofrecer una experiencia completa de apuestas y juegos en línea a operadores de todo el mundo. El sistema soporta múltiples operadores con personalización independiente de temas, compartiendo una infraestructura escalable orientada a rendimiento. Participé en el desarrollo de la arquitectura front-end, implementando componentes modulares, un sistema de theming dinámico y optimizaciones que garantizan una experiencia fluida en distintos dispositivos. El proyecto fue diseñado para escalar horizontalmente, soportando alto volumen de usuarios simultáneos con latencia mínima."
+				"description": "Lumos Gaming es una plataforma whitelabel de iGaming construida con arquitectura multi-tenant y multi-theme, diseñada para ofrecer una experiencia completa de apuestas y juegos en línea a operadores de todo el mundo. El sistema soporta múltiples operadores con personalización independiente de temas, compartiendo una infraestructura escalable orientada a rendimiento. Participé en el desarrollo de la arquitectura front-end, implementando componentes modulares, un sistema de theming dinámico y optimizaciones que garantizan una experiencia fluida en distintos dispositivos. El proyecto fue diseñado para escalar horizontalmente, soportando alto volumen de usuarios simultáneos con latencia mínima.",
+				"imageSrc": "/img/lumos-gaming.svg",
+				"logoSrc": "",
+				"lightEffectColor": "#F7CF7A",
+				"gradient": "linear-gradient(72deg, #E5B754 -8.58%, #C99F45 36.98%, #8E6E29 105.59%)",
+				"titleColor": "#E5B754",
+				"textColor": "white",
+				"link": ""
 			},
 			{
 				"name": "DataPlay Bets",
-				"description": "DataPlay Bets es un proyecto de apuestas de fútbol pre-partido impulsado por ciencia de datos. Construido completamente en Python con Pandas y modelado estadístico, analiza cuotas, patrones de ligas y contexto de partidos para encontrar oportunidades rentables antes del inicio. En los últimos dos años, desarrollé y validé más de 20 modelos rentables, todos rigurosamente backtesteados en más de 100,000 partidos de ligas mundiales."
+				"description": "DataPlay Bets es un proyecto de apuestas de fútbol pre-partido impulsado por ciencia de datos. Construido completamente en Python con Pandas y modelado estadístico, analiza cuotas, patrones de ligas y contexto de partidos para encontrar oportunidades rentables antes del inicio. En los últimos dos años, desarrollé y validé más de 20 modelos rentables, todos rigurosamente backtesteados en más de 100,000 partidos de ligas mundiales.",
+				"imageSrc": "/img/dataplay-bets.svg",
+				"logoSrc": "/img/dataplay-bets-logo.svg",
+				"lightEffectColor": "#24D88A",
+				"gradient": "linear-gradient(72deg, #1E2D46 -8.58%, #27426B 36.98%, #2A4E84 105.59%)",
+				"titleColor": "#274470",
+				"textColor": "white",
+				"link": "https://dataplaybets.vercel.app/"
 			},
 			{
 				"name": "Cuida Design System",
-				"description": "Cuida Design System es un framework UI escalable construido para acelerar el desarrollo frontend con consistencia y claridad. Diseñado desde cero con enfoque en usabilidad del mundo real, reúne una biblioteca limpia de componentes, theming basado en tokens y layouts flexibles. He construido y refinado más de 30 componentes con soporte completo para diseño responsivo y accesibilidad."
+				"description": "Cuida Design System es un framework UI escalable construido para acelerar el desarrollo frontend con consistencia y claridad. Diseñado desde cero con enfoque en usabilidad del mundo real, reúne una biblioteca limpia de componentes, theming basado en tokens y layouts flexibles. He construido y refinado más de 30 componentes con soporte completo para diseño responsivo y accesibilidad.",
+				"imageSrc": "/img/cuida.svg",
+				"logoSrc": "/img/cuida-logo.svg",
+				"lightEffectColor": "#24D88A",
+				"gradient": "linear-gradient(72deg, #EEFFF4 -8.58%, #FAFFFC 18.07%, #FFF 61.68%)",
+				"titleColor": "#2AC092",
+				"textColor": "#29343F",
+				"link": "https://cuida.framer.wiki"
 			},
 			{
 				"name": "Dentuxo Board",
-			"description": "Dentuxo Board es una interfaz de gestión de tarefas estilo Trello diseñada como proyecto de portafolio UX, en colaboración con Rafael Dias ({'@'}rafael.diasg en Instagram). Como mockup de alta fidelidad en Figma, muestra jerarquía visual limpia, interacciones intuitivas de drag-and-drop y un layout optimizado para seguimiento de tareas en flujos de trabajo ágiles."
+			"description": "Dentuxo Board es una interfaz de gestión de tarefas estilo Trello diseñada como proyecto de portafolio UX, en colaboración con Rafael Dias ({'@'}rafael.diasg en Instagram). Como mockup de alta fidelidad en Figma, muestra jerarquía visual limpia, interacciones intuitivas de drag-and-drop y un layout optimizado para seguimiento de tareas en flujos de trabajo ágiles.",
+				"imageSrc": "/img/dentuxo.svg",
+				"logoSrc": "/img/dentuxo-logo.svg",
+				"lightEffectColor": "#BD5D1B",
+				"gradient": "linear-gradient(72deg, #CDAF76 36.14%, #B38B5C 87.76%, #93603C 105.59%)",
+				"titleColor": "#905D3A",
+				"textColor": "#3F1D10",
+				"link": "https://www.figma.com/design/8SNVK0EsBUh60hhA4Z3LKR/Dentuxo-Board?t=1qppbG2ZhppeNKV8-0"
 			},
 			{
 				"name": "Minha Vez",
-				"description": "Minha Vez es un dashboard innovador que optimiza la gestión de filas de atención, organizando llamadas diarias según prioridades definidas por el mostrador de recepción. Participé activamente en la concepción inicial del proyecto, creando flujos e interacciones que garantizan una experiencia de usuario eficiente e intuitiva. Además, gestioné el equipo de desarrollo como Scrum Master."
+				"description": "Minha Vez es un dashboard innovador que optimiza la gestión de filas de atención, organizando llamadas diarias según prioridades definidas por el mostrador de recepción. Participé activamente en la concepción inicial del proyecto, creando flujos e interacciones que garantizan una experiencia de usuario eficiente e intuitiva. Además, gestioné el equipo de desarrollo como Scrum Master.",
+				"imageSrc": "/img/minha-vez.svg",
+				"logoSrc": "/img/minha-vez-logo.svg",
+				"lightEffectColor": "#736EEC",
+				"gradient": "linear-gradient(72deg, #E2DEFF -8.58%, #F4F4FF 18.07%, #FFF 61.68%), #D9D9D9",
+				"titleColor": "#6174D1",
+				"textColor": "#030B33",
+				"link": "https://minhavez.com.br/"
 			},
 			{
 				"name": "Cidade Saudável",
-				"description": "Cidade Saudável es una plataforma web diseñada para apoyar la gestión de salud pública en municipios, con más de 10 módulos que cubren áreas como Regulación, Control de Endemias y Salud Familiar. Diseñé la landing page y estuve activamente involucrado en la evolución continua de la plataforma. El proyecto ha impactado a más de 2 millones de ciudadanos y atiende a más de 6,000 profesionales de salud."
+				"description": "Cidade Saudável es una plataforma web diseñada para apoyar la gestión de salud pública en municipios, con más de 10 módulos que cubren áreas como Regulación, Control de Endemias y Salud Familiar. Diseñé la landing page y estuve activamente involucrado en la evolución continua de la plataforma. El proyecto ha impactado a más de 2 millones de ciudadanos y atiende a más de 6,000 profesionales de salud.",
+				"imageSrc": "/img/cidade-saudavel.svg",
+				"logoSrc": "/img/cidade-saudavel-logo.svg",
+				"lightEffectColor": "#26AD5B",
+				"gradient": "linear-gradient(72deg, #20AD57 -8.58%, #25B55D 41.92%, #45E885 105.59%)",
+				"titleColor": "#25BC60",
+				"textColor": "#FFFFFF",
+				"link": "https://cidadesaudavel.com/"
 			},
 			{
 				"name": "Habitação",
-				"description": "El Proyecto Habitação agiliza las solicitudes de vivienda gubernamentales. Los ciudadanos se inscriben a través de un formulario intuitivo, con el sistema soportando múltiples programas. Un CMS robusto permite a los administradores gestionar estos programas y solicitudes de manera eficiente. Estuve involucrado desde el inicio, diseñando la landing page y formularios ciudadanos."
+				"description": "El Proyecto Habitação agiliza las solicitudes de vivienda gubernamentales. Los ciudadanos se inscriben a través de un formulario intuitivo, con el sistema soportando múltiples programas. Un CMS robusto permite a los administradores gestionar estos programas y solicitudes de manera eficiente. Estuve involucrado desde el inicio, diseñando la landing page y formularios ciudadanos.",
+				"imageSrc": "/img/habitacao.svg",
+				"logoSrc": "",
+				"lightEffectColor": "#ED3A0E",
+				"gradient": "linear-gradient(72deg, #FF8567 -8.58%, #FFAE6A 16.12%, #FFB66A 105.59%)",
+				"titleColor": "#FF7C5C",
+				"textColor": "#41190A",
+				"link": "https://habitacao.sysvale.com/"
 			},
 			{
 				"name": "Landing Page - Sysvale",
-				"description": "Diseñé y asistí en la implementación de la landing page de la empresa, enfocándome en crear una experiencia visualmente atractiva y fácil de usar. El objetivo era comunicar efectivamente el mensaje de la marca y guiar a los visitantes hacia información y servicios clave. Mis contribuciones incluyeron conceptos iniciales de diseño, elementos de interfaz de usuario y colaboración con el equipo de desarrollo."
+				"description": "Diseñé y asistí en la implementación de la landing page de la empresa, enfocándome en crear una experiencia visualmente atractiva y fácil de usar. El objetivo era comunicar efectivamente el mensaje de la marca y guiar a los visitantes hacia información y servicios clave. Mis contribuciones incluyeron conceptos iniciales de diseño, elementos de interfaz de usuario y colaboración con el equipo de desarrollo.",
+				"imageSrc": "/img/sysvale.svg",
+				"logoSrc": "/img/sysvale-logo.svg",
+				"lightEffectColor": "#012147",
+				"gradient": "linear-gradient(72deg, #07346B -8.58%, #0C4B97 57.84%, #1579F3 105.59%)",
+				"titleColor": "#07346A",
+				"textColor": "#FFFFFF",
+				"link": "https://sysvale.com/"
 			}
 		]
 	},

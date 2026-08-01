@@ -5,7 +5,7 @@
     <div class="background-circle" />
 
     <div class="flex w-full items-center justify-center border-b border-black/5 lg:hidden">
-      <div class="mx-auto w-full max-w-[1150px] pb-3">
+      <div class="mx-auto w-full max-w-287.5 pb-3">
         <LanguageSwitcher />
       </div>
     </div>
@@ -16,12 +16,12 @@
 
 <style scoped>
 .background-design {
-  background: #edf0f1;
+  background: var(--color-background);
 }
 
 .background-lightning {
   position: absolute;
-  background: #8b5cf6;
+  background: var(--color-primary);
   height: 90px;
   width: 1200px;
   border-radius: 50%;

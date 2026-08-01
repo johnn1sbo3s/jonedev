@@ -1,12 +1,12 @@
 <template>
   <div class="timeline-item relative mb-12 flex items-start gap-6 lg:gap-8" :data-animate="dataAnimate">
-    <div class="timeline-dot z-10 mt-4 h-4 w-4 shrink-0 rounded-full bg-[#8B5CF6]" />
+    <div class="timeline-dot z-10 mt-4 h-4 w-4 shrink-0 rounded-full" :style="{ background: 'var(--color-primary)' }" />
 
     <div class="timeline-card flex-1 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
       <h3 class="color-neutral-dark text-lg leading-tight font-semibold">
         {{ title }}
 
-        <span class="block text-sm text-[#a78bfa] sm:mt-0 sm:ml-1 sm:inline"> @ {{ company }} </span>
+        <span class="block text-sm sm:mt-0 sm:ml-1 sm:inline" style="color: var(--color-primary-light)"> @ {{ company }} </span>
       </h3>
 
       <p class="color-neutral-light mt-2">{{ description }}</p>
@@ -16,28 +16,15 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  company: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  date: {
-    type: String,
-    required: true,
-  },
-  dataAnimate: {
-    type: String,
-    default: 'slide-left',
-  },
+<script setup lang="ts">
+withDefaults(defineProps<{
+  title: string
+  company: string
+  description: string
+  date: string
+  dataAnimate?: string
+}>(), {
+  dataAnimate: 'slide-left',
 })
 </script>
 

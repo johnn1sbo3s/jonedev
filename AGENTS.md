@@ -4,7 +4,7 @@ Guide for AI agents working on the jonedev portfolio project.
 
 ## Project Overview
 
-Personal portfolio site for João Paulo Castro (Product Engineer | Frontend Specialist). Built with Nuxt 3.17.4, Tailwind CSS, Vue 3. Deployed on Vercel via static generation (`nuxt generate`).
+Personal portfolio site for João Paulo Castro (Product Engineer | Frontend Specialist). Built with Nuxt 4.5.0, Tailwind CSS v4, Vue 3, and i18n for internationalization (EN/PT/ES). Deployed on Vercel via static generation (`nuxt generate`).
 
 **Goal:** Attract recruiters with distinctive design and motion.
 
@@ -13,28 +13,33 @@ Personal portfolio site for João Paulo Castro (Product Engineer | Frontend Spec
 Single-page portfolio with 2 routes, no API layer, no server-side logic beyond Nuxt defaults.
 
 ```
-app.vue (root shell)
-├── NavigationMenu.vue (fixed nav)
+app/App.vue (root shell)
+├── LanguageSwitcher.vue (mobile, top bar)
 ├── NuxtPage (router)
-│   ├── index.vue (home: HeroLeftContent + HeroIllustration)
+│   ├── index.vue (home: HeroLeftContent + HeroIllustration + TimelineSection + AcademicSection)
 │   └── portfolio.vue (projects: v-for ProjectCard)
 └── Background effects (violet lightning blur, blue circle blur)
 ```
 
-**Data flow:** All data is inline — no fetch calls, no CMS. Portfolio projects are hardcoded in `pages/portfolio.vue` as a local array of objects. Component props flow top-down only. No state management library; `useScrollAnimation` is the sole composable.
+**Data flow:** All data is managed via i18n locale files (`i18n/locales/`) for portfolio projects, timeline, and education data. No fetch calls, no CMS. Component props flow top-down only. No state management library; `useScrollAnimation` is the sole composable.
 
-**Key architectural pattern:** Design system lives in `assets/css/main.css`, not `tailwind.config.js`. Tailwind handles layout/utility classes. Colors, animations, transitions, and keyframes are plain CSS with custom properties.
+**Key architectural pattern:** Design system lives in `app/assets/css/main.css`, not a Tailwind config file. Tailwind v4 handles layout/utility classes. Colors, animations, transitions, and keyframes are plain CSS with custom properties.
 
 ## Key Directories
 
 ```
-pages/              # 2 routes: index.vue, portfolio.vue
-components/         # 6 Vue components (auto-imported by Nuxt)
-composables/        # 1 composable: useScrollAnimation.ts
-assets/css/         # main.css — design system (keyframes, tokens, transitions)
-public/img/         # 20 SVGs + 1 PNG static assets
-.nuxt/              # Generated (do not edit)
-.output/            # Build output (do not edit)
+app/                   # Nuxt 4 app directory (all source code)
+  pages/               # 2 routes: index.vue, portfolio.vue
+  components/          # 10 Vue components (auto-imported by Nuxt)
+  composables/         # 1 composable: useScrollAnimation.ts
+  assets/css/          # main.css — design system (keyframes, tokens, transitions)
+  App.vue              # Root shell (replaces root app.vue)
+i18n/locales/          # Translation files: en.json, pt.json, es.json
+public/img/            # 20 static image assets (SVGs + PNG)
+scripts/               # Lint-staged helper scripts
+eslint-rules/          # Custom ESLint rules
+.nuxt/                 # Generated (do not edit)
+.output/               # Build output (do not edit)
 ```
 
 ## Development Commands
@@ -45,6 +50,9 @@ npm run build        # Production build
 npm run generate     # Static site generation (Vercel deploy)
 npm run preview      # Preview generated site locally
 npm run postinstall  # Runs nuxt prepare (generates .nuxt/)
+npm run lint         # Run ESLint
+npm run lint:fix     # Run ESLint with auto-fix
+npm run type-check   # Run vue-tsc type checking
 ```
 
 **Package manager:** npm. `pnpm-lock.yaml` and `pnpm-workspace.yaml` exist but are gitignored — do not use pnpm.
@@ -57,7 +65,7 @@ npm run postinstall  # Runs nuxt prepare (generates .nuxt/)
 
 - **Vue 3 Composition API** with `<script setup>` — no Options API.
 - **Scoped styles:** `<style lang="css" scoped>` in every component.
-- **Auto-imports:** Nuxt auto-imports components in `components/` and composables in `composables/`. No manual import statements needed.
+- **Auto-imports:** Nuxt auto-imports components in `app/components/` and composables in `app/composables/`. No manual import statements needed.
 - **Props:** Use `defineProps()` with explicit types and defaults. Pattern: `{ propName: Type }` or `{ propName: { type: Type, default: value } }`.
 
 ### Props Convention
@@ -78,7 +86,7 @@ defineProps({
 
 - **Tailwind** for layout, spacing, responsive breakpoints (`lg:`, `xl:`).
 - **CSS custom properties** for colors: `--hover-color` in `SimpleButton`, `v-bind()` bridges reactive props to scoped CSS.
-- **`:deep()` (ONE colon)** for piercing child component styles in scoped CSS. Two colons (`::deep`) or three (`::deep`) are invalid and silently fail.
+- **`:deep()` (ONE colon)** for piercing child component styles in scoped CSS. Two colons (`::deep`) or three (`:::deep`) are invalid and silently fail.
 - **Color tokens in main.css:**
   - `.color-primary` → `#8B5CF6` (violet)
   - `.color-neutral` → `#3C3842`
@@ -101,41 +109,57 @@ defineProps({
 - **Desktop threshold:** `lg:` (1024px). Orbit illustration hidden below 1500px via `hidden lg:block` pattern.
 - **Single-component approach:** Use `hidden lg:flex` / `flex lg:hidden` for responsive visibility, not separate mobile/desktop components.
 
+### Internationalization (i18n)
+
+- **Locale files:** `i18n/locales/en.json`, `pt.json`, `es.json`
+- **Strategy:** `prefix_except_default` — English is the default (no prefix), Portuguese and Spanish get `/pt/` and `/es/` prefixes.
+- **Composition API:** Use `useI18n()` composable in components to access `$t()` translation function.
+- **Key organization:** Locale JSON keys are namespaced by section (e.g., `hero.name`, `portfolio.projects`).
+
 ## Important Files
 
 | File | Purpose |
 |---|---|
-| `nuxt.config.ts` | Nuxt config: 7 modules, Clarity analytics, global CSS |
-| `assets/css/main.css` | **Design system** — all keyframes, color tokens, animations, transitions |
-| `app.vue` | Root layout: background effects (lightning blur, circle blur), NuxtPage |
-| `pages/index.vue` | Home page: hero content + orbit illustration |
-| `pages/portfolio.vue` | Portfolio: hardcoded projects array, v-for ProjectCard |
-| `components/HeroIllustration.vue` | Orbit animation (45s rotation, counter-rotation) |
-| `components/ProjectCard.vue` | Project card with gradient bg, v-bind() reactive CSS |
-| `components/SimpleButton.vue` | Link button with hover fill animation |
-| `composables/useScrollAnimation.ts` | IntersectionObserver composable for scroll reveals |
-| `tailwind.config.js` | Minimal Tailwind config (no theme extensions) |
+| `nuxt.config.ts` | Nuxt config: 7 modules, i18n setup, Clarity analytics, global CSS |
+| `app/App.vue` | Root shell: background effects (lightning blur, circle blur), NuxtPage |
+| `app/assets/css/main.css` | **Design system** — all keyframes, color tokens, animations, transitions |
+| `app/pages/index.vue` | Home page: hero content, orbit illustration, timeline, academic section |
+| `app/pages/portfolio.vue` | Portfolio: projects array (i18n data), v-for ProjectCard |
+| `app/components/AcademicSection.vue` | Academic/education timeline section |
+| `app/components/HeroIllustration.vue` | Orbit animation (45s rotation, counter-rotation) |
+| `app/components/HeroLeftContent.vue` | Hero text content: name, title, description |
+| `app/components/LanguageSwitcher.vue` | Language toggle (mobile, top bar) |
+| `app/components/NavigationMenu.vue` | Fixed navigation menu |
+| `app/components/OrbitCard.vue` | Individual card in the orbit animation |
+| `app/components/ProjectCard.vue` | Project card with gradient bg, v-bind() reactive CSS |
+| `app/components/SimpleButton.vue` | Link button with hover fill animation |
+| `app/components/TimelineItem.vue` | Single timeline entry |
+| `app/components/TimelineSection.vue` | Professional timeline section |
+| `app/composables/useScrollAnimation.ts` | IntersectionObserver composable for scroll reveals |
+| `i18n/locales/en.json` | English translations |
+| `i18n/locales/pt.json` | Portuguese translations |
+| `i18n/locales/es.json` | Spanish translations |
 | `eslint.config.mjs` | ESLint 9 flat config with @nuxt/eslint |
 
 ## Nuxt Modules
 
 Installed in `nuxt.config.ts`:
 1. `@nuxt/eslint` — ESLint integration
-2. `@nuxtjs/tailwindcss` — Tailwind CSS
+2. `@nuxtjs/tailwindcss` — Tailwind CSS v4
 3. `@nuxt/fonts` — Font loading (Lexend)
-4. `@nuxtjs/device` — Device detection (installed but **avoid using** — prefer Tailwind responsive classes)
-5. `nuxt-icon` — Icon component (used for `uil:arrow-up-right` in portfolio.vue)
-6. `lucide-vue-next` — Lucide icon library for inline SVG icons (LinkedIn, GitHub, Mail in hero)
-7. `@nuxt/image-edge` — Image optimization
-8. `nuxt-scripts` — Microsoft Clarity analytics (id: `ruuv9lie14`)
+4. `@nuxt/icon` — Icon component (lucide + uil icon sets via `@iconify-json/lucide` and `@iconify-json/uil`)
+5. `@nuxt/scripts` — Microsoft Clarity analytics (id: `ruuv9lie14`)
+6. `@nuxtjs/i18n` — Internationalization (EN/PT/ES, `prefix_except_default` strategy)
+7. `@nuxtjs/device` — Device detection (installed but **avoid using** — prefer Tailwind responsive classes)
 
 ## Static Assets
 
-All in `public/img/` — 18 SVGs + 1 PNG:
+All in `public/img/` — 20 static image assets:
 - **Profile:** `picture.svg`
-- **Project images:** project-specific SVGs (e.g., `project-*.svg`)
-- **Logos:** `vercel.svg`, `nuxt.svg`, `vuejs.svg`, `tailwindcss.svg`
-- **Backgrounds:** `bg-texture.png` (appears unused)
+- **Project images:** project-specific SVGs (e.g., `cidade-saudavel.svg`, `cuida.svg`, `dentuxo.svg`, etc.)
+- **Logos:** `sysvale-logo.svg`, `cuida-logo.svg`, `cidade-saudavel-logo.svg`, `dataplay-bets-logo.svg`, `dentuxo-logo.svg`, `minha-vez-logo.svg`
+- **Cards:** `data-science-card.svg`, `frontend-card.svg`, `ux-card.svg`
+- **Backgrounds:** `background.png`
 
 ## Testing & QA
 

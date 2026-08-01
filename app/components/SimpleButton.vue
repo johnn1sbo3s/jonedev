@@ -10,20 +10,13 @@
   </a>
 </template>
 
-<script setup>
-defineProps({
-  link: {
-    type: String,
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  hoverColor: {
-    type: String,
-    default: '#8B5CF6',
-  },
+<script setup lang="ts">
+withDefaults(defineProps<{
+  link: string
+  title: string
+  hoverColor?: string
+}>(), {
+  hoverColor: '#8B5CF6',
 })
 </script>
 

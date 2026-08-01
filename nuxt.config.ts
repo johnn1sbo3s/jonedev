@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxtjs/device', '@nuxt/icon', '@nuxt/scripts', '@nuxtjs/i18n'],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/icon', '@nuxt/scripts', '@nuxtjs/i18n'],
   icon: {
     mode: 'svg',
   },
