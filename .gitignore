@@ -30,6 +30,7 @@ pnpm-workspace.yaml
 # Screenshots and artifacts
 *.png
 *.jpg
+!public/img/og-image.png
 .playwright-mcp/
 
 # MiMoCode

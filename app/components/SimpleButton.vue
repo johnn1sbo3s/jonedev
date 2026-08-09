@@ -1,5 +1,5 @@
 <template>
-  <a class="simple-button" :style="{ '--hover-color': hoverColor }" :href="link" target="_blank" rel="noopener noreferrer">
+  <a class="simple-button" :style="{ '--hover-color': hoverColor }" :href="link" :target="download ? undefined : '_blank'" :rel="download ? undefined : 'noopener noreferrer'" :download="download || undefined">
     <span class="simple-button-bg" />
 
     <span class="simple-button-content">
@@ -15,8 +15,10 @@ withDefaults(defineProps<{
   link: string
   title: string
   hoverColor?: string
+  download?: boolean
 }>(), {
   hoverColor: '#8B5CF6',
+  download: false,
 })
 </script>
 

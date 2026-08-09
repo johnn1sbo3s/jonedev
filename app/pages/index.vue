@@ -20,4 +20,15 @@
 
 <script setup lang="ts">
 useScrollAnimation()
+
+const { t } = useI18n()
+
+useHead(() => ({
+  title: `João Paulo Castro – ${t('hero.title')}`,
+  meta: [
+    { name: 'description', content: t('hero.description') },
+    { property: 'og:title', content: `João Paulo Castro – ${t('hero.title')}` },
+    { property: 'og:description', content: t('hero.description') },
+  ],
+}))
 </script>

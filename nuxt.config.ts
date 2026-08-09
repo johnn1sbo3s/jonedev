@@ -17,10 +17,11 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    baseUrl: 'https://jonedev.vercel.app',
     locales: [
-      { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'pt', name: 'Português', file: 'pt.json' },
-      { code: 'es', name: 'Español', file: 'es.json' },
+      { code: 'en', language: 'en', name: 'English', file: 'en.json' },
+      { code: 'pt', language: 'pt-BR', name: 'Português', file: 'pt.json' },
+      { code: 'es', language: 'es', name: 'Español', file: 'es.json' },
     ],
     defaultLocale: 'en',
     langDir: 'locales',

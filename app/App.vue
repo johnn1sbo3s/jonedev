@@ -14,6 +14,46 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { CONTACT_EMAIL } from '~/utils/constants'
+
+const head = useLocaleHead({ seo: true })
+
+const seoHead = computed(() => ({
+  htmlAttrs: { lang: head.value.htmlAttrs?.lang },
+  meta: [
+    ...(head.value.meta ?? []),
+    { property: 'og:site_name', content: 'JoneDev' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://jonedev.vercel.app/img/og-image.png' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:alt', content: 'João Paulo Castro – Product Engineer | Frontend Specialist' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+  ],
+  link: [...(head.value.link ?? [])],
+  script: [
+    {
+      type: 'application/ld+json' as const,
+      textContent: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'João Paulo Castro',
+        jobTitle: 'Product Engineer | Frontend Specialist',
+        url: 'https://jonedev.vercel.app',
+        email: CONTACT_EMAIL,
+        sameAs: [
+          'https://www.linkedin.com/in/joaopaulo-castro/',
+          'https://github.com/johnn1sbo3s/',
+        ],
+      }),
+    },
+  ],
+}))
+
+useHead(seoHead)
+</script>
+
 <style scoped>
 .background-design {
   background: var(--color-background);

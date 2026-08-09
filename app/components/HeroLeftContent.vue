@@ -16,7 +16,7 @@
       {{ $t('hero.description') }}
     </div>
 
-    <div class="z-50 mt-4 flex w-full max-w-100 flex-col gap-2 lg:flex-row">
+    <div class="z-50 mt-4 flex w-full max-lg:max-w-100 flex-col gap-2 lg:flex-row">
       <SimpleButton link="https://www.linkedin.com/in/joaopaulo-castro/" title="LinkedIn" hover-color="#0A66C2">
         <template #icon>
           <Icon name="lucide:linkedin" :size="22" style="color: var(--color-icon)" />
@@ -26,6 +26,12 @@
       <SimpleButton link="https://github.com/johnn1sbo3s/" title="GitHub" hover-color="#181717">
         <template #icon>
           <Icon name="lucide:github" :size="22" style="color: var(--color-icon)" />
+        </template>
+      </SimpleButton>
+
+      <SimpleButton :link="cvLink" :title="$t('hero.downloadCv')" hover-color="#8B5CF6" download>
+        <template #icon>
+          <Icon name="lucide:file-down" :size="22" style="color: var(--color-icon)" />
         </template>
       </SimpleButton>
 
@@ -41,7 +47,8 @@
 </template>
 
 <script setup lang="ts">
-import { CONTACT_EMAIL } from '~/utils/constants'
+import { CONTACT_EMAIL, CV_URL } from '~/utils/constants'
 
 const contactLink = `mailto:${CONTACT_EMAIL}`
+const cvLink = CV_URL
 </script>

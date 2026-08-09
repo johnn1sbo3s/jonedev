@@ -58,7 +58,16 @@ interface Project {
 
 useScrollAnimation()
 
-const { tm, rt } = useI18n()
+const { t, tm, rt } = useI18n()
+
+useHead(() => ({
+  title: `${t('portfolio.sectionTitle')} – João Paulo Castro`,
+  meta: [
+    { name: 'description', content: t('portfolio.subtitle') },
+    { property: 'og:title', content: `${t('portfolio.sectionTitle')} – João Paulo Castro` },
+    { property: 'og:description', content: t('portfolio.subtitle') },
+  ],
+}))
 
 const projects = computed(() => {
   const translated = tm('portfolio.projects') as Project[]

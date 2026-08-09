@@ -6,7 +6,8 @@
 	},
 	"hero": {
 		"title": "Product Engineer – Especialista em Frontend",
-		"description": "Criando soluções digitais impactantes há mais de 6 anos. Construo produtos intuitivos através de desenvolvimento e design frontend, unindo código e dados para melhorar vidas."
+		"description": "Criando soluções digitais impactantes há mais de 6 anos. Construo produtos intuitivos através de desenvolvimento e design frontend, unindo código e dados para melhorar vidas.",
+		"downloadCv": "CV"
 	},
 	"journey": {
 		"my": "Minha",
